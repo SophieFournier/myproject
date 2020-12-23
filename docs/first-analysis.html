@@ -424,7 +424,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-12-07
+<strong>Last updated:</strong> 2020-12-23
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -515,22 +515,25 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree0f3609f89ee0fc219f940168e78728e292e87146targetblank0f3609fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/0f3609f89ee0fc219f940168e78728e292e87146" target="_blank">0f3609f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree422789e3bb75c3134ca05640424f9cde905a886atargetblank422789ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/422789e3bb75c3134ca05640424f9cde905a886a" target="_blank">422789e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree0f3609f89ee0fc219f940168e78728e292e87146targetblank0f3609fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree422789e3bb75c3134ca05640424f9cde905a886atargetblank422789ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/0f3609f89ee0fc219f940168e78728e292e87146" target="_blank">0f3609f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/422789e3bb75c3134ca05640424f9cde905a886a" target="_blank">422789e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-working directory clean
+Untracked files:
+    Untracked:  analysis/Rare-Variant Association Methods.Rmd
+    Untracked:  site_libs/
+
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -573,6 +576,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/SophieFournier/myproject/blob/422789e3bb75c3134ca05640424f9cde905a886a/analysis/first-analysis.Rmd" target="_blank">422789e</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2020-12-23
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/6258b205b335857e38727f4561fa67888ef15dd4/docs/first-analysis.html" target="_blank">6258b20</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2020-12-07
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/SophieFournier/myproject/blob/0f3609f89ee0fc219f940168e78728e292e87146/analysis/first-analysis.Rmd" target="_blank">0f3609f</a>
 </td>
 <td>
@@ -592,8 +629,27 @@ Add my first analysis
 </div>
 </div>
 </div>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
+<div id="rare-variant-association-methods" class="section level2">
+<h2>Rare-Variant Association Methods</h2>
+<p>Material is from: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/</a></p>
+<p>What are rare variant association methods discussed in the paper?</p>
+<p>Burden tests, Adaptive burden tests, Variance component tests, Combined tests and EC tests</p>
+<p>What are their strengths and limitations?</p>
+<p>Burden tests:</p>
+<p>Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction</p>
+<p>Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often</p>
+<p>Adaptive Burden tests:</p>
+<p>Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation</p>
+<p>Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests</p>
+<p>Variance Component tests</p>
+<p>Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants</p>
+<p>Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction</p>
+<p>Combined tests:</p>
+<p>Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.</p>
+<p>Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method</p>
+<p>EC test:</p>
+<p>Strengths – is powerful when a very small proportion of variants are causal</p>
+<p>Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
