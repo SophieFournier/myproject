@@ -14,11 +14,7 @@ editor_options:
 ```
 Material is from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
 
-What are rare variant association methods discussed in the paper?
-
-Burden tests, Adaptive burden tests, Variance component tests, Combined tests and EC tests
-
-What are their strengths and limitations?
+Rare-Variant Association Methods
 
 Burden tests: 
 
