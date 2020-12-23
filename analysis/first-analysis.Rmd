@@ -7,9 +7,46 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Introduction
+## Rare-Variant Association Methods
 
 ```{r}
 
 ```
+Material is from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
+
+What are rare variant association methods discussed in the paper?
+
+Burden tests, Adaptive burden tests, Variance component tests, Combined tests and EC tests
+
+What are their strengths and limitations?
+
+Burden tests: 
+
+Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
+
+Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often
+
+Adaptive Burden tests:
+
+Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation
+
+Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests
+
+Variance Component tests 
+
+Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants
+
+Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction
+
+Combined tests:
+
+Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.
+
+Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method
+
+EC test: 
+
+Strengths – is powerful when a very small proportion of variants are causal
+
+Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal
 
