@@ -32,6 +32,7 @@ Hotelling's T2 test:
 
 Implementation 
 CMC(y, X, maf = 0.05, perm = 100) 
+
 Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
 
@@ -51,6 +52,7 @@ Equation:
 
 Implementation
 ASUM(y, X, perm = 100)
+
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
@@ -70,6 +72,7 @@ Equation:
 
 Implementation
 SKAT(y, X, kernel = "linear", weights = NULL, a = 1, b = 25, perm = NULL) 
+
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
@@ -83,6 +86,7 @@ Binomial distribution equation:
 
 Implementation
 CALPHA(y, X, perm = NULL)
+
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
 
