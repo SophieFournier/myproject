@@ -12,15 +12,28 @@ editor_options:
 ```{r}
 
 ```
-Material is from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
-
 Burden tests: 
 
 Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
 
 Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often
 
-CMC method is used to find associations with rare variant for common diseases.
+CMC method
+
+Basic idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
+
+Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data. 
+
+Simple marker test equation:
+
+Multiple-marker test equation:
+
+Hotelling's T2 test:
+
+Implementation 
+CMC(y, X, maf = 0.05, perm = 100) 
+Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
 
 Adaptive Burden tests:
 
@@ -28,7 +41,18 @@ Strengths – are stronger than burden tests using fixed weights or thresholds. 
 
 Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests
 
-aSum test is also know as data-adaptive test which is used for disease association with multiple common or rare variants.
+aSum test 
+
+Basic idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U. 
+
+Model: The Sum test can be used to summarize information on multiple Nucleotide Polymorphisms (SNP’s) with a DF=1. Adaptive Sum tests are low power and have limited control over error type I.
+
+Equation:
+
+Implementation
+ASUM(y, X, perm = 100)
+Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
 Variance-Component tests: 
 
@@ -36,9 +60,31 @@ Strengths – are powerful in the presence of both trait increasing and decreasi
 
 Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction
 
-SKAT is a rare-variant association test for sequencing data with the sequence association test.
+SKAT
 
-C-alpha tests are used to detect unusual distribution of rare variants.
+Basic idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.
+
+Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.
+
+Equation:
+
+Implementation
+SKAT(y, X, kernel = "linear", weights = NULL, a = 1, b = 25, perm = NULL) 
+Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
+
+C-alpha test
+
+Basic idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.
+
+Model:
+
+Binomial distribution equation:
+
+Implementation
+CALPHA(y, X, perm = NULL)
+Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
 
 Combined tests:
 
@@ -46,7 +92,19 @@ Strengths – are stronger with respect to the percentage of causal variants and
 
 Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method
 
-SKAT-O are the best tests to find rare variant effects in sequencing association studies.
+SKAT-O
+
+Basic idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
+
+Model:
+
+Equation:
+
+Implementation
+
+Y:
+
+X:
 
 EC test: 
 
@@ -54,4 +112,27 @@ Strengths – is powerful when a very small proportion of variants are causal
 
 Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal
 
-EC test is an exponential combination procedure for set-based association tests in sequencing studies.
+EC test
+
+Basic idea:
+
+Model:
+
+Equation:
+
+Implementation
+
+Y:
+
+X:
+
+Sources:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/
+https://www.rdocumentation.org/packages/AssotesteR/versions/0.1-10/topics/CMC 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2912645/
+https://rdrr.io/cran/AssotesteR/man/ASUM.html 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135811/
+https://rdrr.io/cran/AssotesteR/man/SKAT.html 
+https://rdrr.io/cran/AssotesteR/man/CALPHA.html
+https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322
