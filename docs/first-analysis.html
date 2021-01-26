@@ -424,7 +424,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-01-05
+<strong>Last updated:</strong> 2021-01-26
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -515,16 +515,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeaaea4a25c15dfc5e2cbbc8868348fefb933401fctargetblankaaea4a2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/aaea4a25c15dfc5e2cbbc8868348fefb933401fc" target="_blank">aaea4a2</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed656ac1691be89da715b90356d2ffec812cd1832targetblankd656ac1a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/d656ac1691be89da715b90356d2ffec812cd1832" target="_blank">d656ac1</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeaaea4a25c15dfc5e2cbbc8868348fefb933401fctargetblankaaea4a2a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed656ac1691be89da715b90356d2ffec812cd1832targetblankd656ac1a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/aaea4a25c15dfc5e2cbbc8868348fefb933401fc" target="_blank">aaea4a2</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/d656ac1691be89da715b90356d2ffec812cd1832" target="_blank">d656ac1</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -571,6 +571,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/d656ac1691be89da715b90356d2ffec812cd1832/analysis/first-analysis.Rmd" target="_blank">d656ac1</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-01-26
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/8e90e218c563cb5386c8d88fa9bc2915bcd451ba/docs/first-analysis.html" target="_blank">8e90e21</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-01-05
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -716,28 +750,58 @@ Add my first analysis
 </div>
 <div id="rare-variant-association-methods" class="section level2">
 <h2>Rare-Variant Association Methods</h2>
-<p>Material is from: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/</a></p>
 <p>Burden tests:</p>
 <p>Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction</p>
 <p>Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often</p>
-<p>CMC method is used to find associations with rare variant for common diseases.</p>
+<p>CMC method</p>
+<p>Basic idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.</p>
+<p>Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data.</p>
+<p>Simple marker test equation:</p>
+<p>Multiple-marker test equation:</p>
+<p>Hotelling’s T2 test:</p>
+<p>Implementation CMC(y, X, maf = 0.05, perm = 100) Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed. X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed.</p>
 <p>Adaptive Burden tests:</p>
 <p>Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation</p>
 <p>Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests</p>
-<p>aSum test is also know as data-adaptive test which is used for disease association with multiple common or rare variants.</p>
+<p>aSum test</p>
+<p>Basic idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U.</p>
+<p>Model: The Sum test can be used to summarize information on multiple Nucleotide Polymorphisms (SNP’s) with a DF=1. Adaptive Sum tests are low power and have limited control over error type I.</p>
+<p>Equation:</p>
+<p>Implementation ASUM(y, X, perm = 100) Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed</p>
 <p>Variance-Component tests:</p>
 <p>Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants</p>
 <p>Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction</p>
-<p>SKAT is a rare-variant association test for sequencing data with the sequence association test.</p>
-<p>C-alpha tests are used to detect unusual distribution of rare variants.</p>
+<p>SKAT</p>
+<p>Basic idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.</p>
+<p>Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.</p>
+<p>Equation:</p>
+<p>Implementation SKAT(y, X, kernel = “linear”, weights = NULL, a = 1, b = 25, perm = NULL) Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
+<p>C-alpha test</p>
+<p>Basic idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.</p>
+<p>Model:</p>
+<p>Binomial distribution equation:</p>
+<p>Implementation CALPHA(y, X, perm = NULL) Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
 <p>Combined tests:</p>
 <p>Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.</p>
 <p>Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method</p>
-<p>SKAT-O are the best tests to find rare variant effects in sequencing association studies.</p>
+<p>SKAT-O</p>
+<p>Basic idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.</p>
+<p>Model:</p>
+<p>Equation:</p>
+<p>Implementation</p>
+<p>Y:</p>
+<p>X:</p>
 <p>EC test:</p>
 <p>Strengths – is powerful when a very small proportion of variants are causal</p>
 <p>Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal</p>
-<p>EC test is an exponential combination procedure for set-based association tests in sequencing studies.</p>
+<p>EC test</p>
+<p>Basic idea:</p>
+<p>Model:</p>
+<p>Equation:</p>
+<p>Implementation</p>
+<p>Y:</p>
+<p>X:</p>
+<p>Sources: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/</a> <a href="https://www.rdocumentation.org/packages/AssotesteR/versions/0.1-10/topics/CMC" class="uri">https://www.rdocumentation.org/packages/AssotesteR/versions/0.1-10/topics/CMC</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2912645/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2912645/</a> <a href="https://rdrr.io/cran/AssotesteR/man/ASUM.html" class="uri">https://rdrr.io/cran/AssotesteR/man/ASUM.html</a> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135811/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135811/</a> <a href="https://rdrr.io/cran/AssotesteR/man/SKAT.html" class="uri">https://rdrr.io/cran/AssotesteR/man/SKAT.html</a> <a href="https://rdrr.io/cran/AssotesteR/man/CALPHA.html" class="uri">https://rdrr.io/cran/AssotesteR/man/CALPHA.html</a> <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322" class="uri">https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322</a></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
