@@ -12,17 +12,19 @@ editor_options:
 ```{r}
 
 ```
-Burden tests: 
+Burden tests: **bold** **### Header 3** 
 
 Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
 
 Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often
 
-CMC method
+CMC **block quote**
 
-Basic idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
+(a) Idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
 
-Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data. 
+(b) Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data. 
+
+(c) R function
 
 Simple marker test equation:
 
@@ -30,77 +32,85 @@ Multiple-marker test equation:
 
 Hotelling's T2 test:
 
-Implementation 
 CMC(y, X, maf = 0.05, perm = 100) 
 
 Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.
+
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
 
-Adaptive Burden tests:
+Adaptive Burden tests: **bold** **### Header 3**
 
 Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation
 
 Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests
 
-aSum test 
+aSum test **block quote**
 
-Basic idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U. 
+(a) Idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U. 
 
-Model: The Sum test can be used to summarize information on multiple Nucleotide Polymorphisms (SNP’s) with a DF=1. Adaptive Sum tests are low power and have limited control over error type I.
+(b) Model: The Sum test can be used to summarize information on multiple Nucleotide Polymorphisms (SNP’s) with a DF=1. Adaptive Sum tests are low power and have limited control over error type I.
+
+(c) R function
 
 Equation:
 
-Implementation
 ASUM(y, X, perm = 100)
 
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
-Variance-Component tests: 
+Variance-Component tests: **bold** **### Header 3**
 
 Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants
 
 Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction
 
-SKAT
+SKAT **block quote**
 
-Basic idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.
+(a) Idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.
 
-Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.
+(b) Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.
+
+(c) R function
 
 Equation:
 
-Implementation
 SKAT(y, X, kernel = "linear", weights = NULL, a = 1, b = 25, perm = NULL) 
 
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
-C-alpha test
+C-alpha test **block quote**
 
-Basic idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.
+(a) Idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.
 
-Model:
+(b) Model:
+
+(c) R function
 
 Binomial distribution equation:
 
-Implementation
 CALPHA(y, X, perm = NULL)
 
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
+
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
 
-Combined tests:
+Combined tests: **bold** **### Header 3**
 
 Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.
 
 Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method
 
-SKAT-O
+SKAT-O **block quote**
 
-Basic idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
+(a) Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
 
-Model:
+(b) Model:
+
+(c) R function
 
 Equation:
 
@@ -110,17 +120,19 @@ Y:
 
 X:
 
-EC test: 
+EC test: **bold** **### Header 3**
 
 Strengths – is powerful when a very small proportion of variants are causal
 
 Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal
 
-EC test
+EC test **block quote**
 
-Basic idea:
+(a) Idea:
 
-Model:
+(b) Model:
+
+(c) R function
 
 Equation:
 
@@ -132,11 +144,19 @@ X:
 
 Sources:
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/
+
 https://www.rdocumentation.org/packages/AssotesteR/versions/0.1-10/topics/CMC 
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2912645/
-https://rdrr.io/cran/AssotesteR/man/ASUM.html 
+
+https://rdrr.io/cran/AssotesteR/man/ASUM.html
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135811/
-https://rdrr.io/cran/AssotesteR/man/SKAT.html 
+
+https://rdrr.io/cran/AssotesteR/man/SKAT.html
+
 https://rdrr.io/cran/AssotesteR/man/CALPHA.html
+
 https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322
