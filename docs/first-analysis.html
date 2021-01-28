@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree5f7de36eeba7966138ae0213f407bc5e353fc2f8targetblank5f7de36a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/5f7de36eeba7966138ae0213f407bc5e353fc2f8" target="_blank">5f7de36</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree28cac602398f072b12d3363387050d73c4f14900targetblank28cac60a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/28cac602398f072b12d3363387050d73c4f14900" target="_blank">28cac60</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree5f7de36eeba7966138ae0213f407bc5e353fc2f8targetblank5f7de36a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree28cac602398f072b12d3363387050d73c4f14900targetblank28cac60a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/5f7de36eeba7966138ae0213f407bc5e353fc2f8" target="_blank">5f7de36</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/28cac602398f072b12d3363387050d73c4f14900" target="_blank">28cac60</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/28cac602398f072b12d3363387050d73c4f14900/analysis/first-analysis.Rmd" target="_blank">28cac60</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-01-28
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/b36a469f9839233ddf3f02ec69767d9803cff105/docs/first-analysis.html" target="_blank">b36a469</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-01-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1111,11 +1145,13 @@ Add my first analysis
 <p>CMC(y, X, maf = 0.05, perm = 100)</p>
 <p>Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed.</p>
-<p><strong>Adaptive Burden tests:</strong></p>
+</div>
+<div id="adaptive-burden-tests" class="section level5">
+<h5><strong>Adaptive Burden tests:</strong></h5>
 <p>Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation</p>
 <p>Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests</p>
 <ul>
-<li>aSum test</li>
+<li><strong>aSum test</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U.</p></li>
@@ -1126,11 +1162,13 @@ Add my first analysis
 <p>ASUM(y, X, perm = 100)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed</p>
-<p><strong>Variance-Component tests:</strong></p>
+</div>
+<div id="variance-component-tests" class="section level5">
+<h5><strong>Variance-Component tests:</strong></h5>
 <p>Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants</p>
 <p>Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction</p>
 <ul>
-<li>SKAT</li>
+<li><strong>SKAT</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.</p></li>
@@ -1142,7 +1180,7 @@ Add my first analysis
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
 <ul>
-<li>C-alpha test</li>
+<li><strong>C-alpha test</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.</p></li>
@@ -1153,11 +1191,13 @@ Add my first analysis
 <p>CALPHA(y, X, perm = NULL)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
-<p><strong>Combined tests:</strong></p>
+</div>
+<div id="combined-tests" class="section level5">
+<h5><strong>Combined tests:</strong></h5>
 <p>Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.</p>
 <p>Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method</p>
 <ul>
-<li>SKAT-O</li>
+<li><strong>SKAT-O</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.</p></li>
@@ -1168,11 +1208,13 @@ Add my first analysis
 <p>Implementation</p>
 <p>Y:</p>
 <p>X:</p>
-<p><strong>EC test:</strong></p>
+</div>
+<div id="ec-test" class="section level5">
+<h5><strong>EC test:</strong></h5>
 <p>Strengths – is powerful when a very small proportion of variants are causal</p>
 <p>Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal</p>
 <ul>
-<li>EC test</li>
+<li><strong>EC test</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea:</p></li>
