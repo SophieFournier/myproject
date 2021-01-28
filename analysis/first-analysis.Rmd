@@ -12,7 +12,7 @@ editor_options:
 ```{r}
 
 ```
-**Burden tests:**  
+**Burden tests: ###**  
 
 Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
 
@@ -38,7 +38,7 @@ Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
 
-Adaptive Burden tests: **bold** **### Header 3**
+**Adaptive Burden tests:** 
 
 Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation
 
@@ -60,7 +60,7 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
-Variance-Component tests: **bold** **### Header 3**
+**Variance-Component tests:** 
 
 Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants
 
@@ -98,7 +98,7 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
 
-Combined tests: **bold** **### Header 3**
+**Combined tests:** 
 
 Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.
 
@@ -120,7 +120,7 @@ Y:
 
 X:
 
-EC test: **bold** **### Header 3**
+**EC test:** 
 
 Strengths – is powerful when a very small proportion of variants are causal
 
