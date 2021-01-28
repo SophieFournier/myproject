@@ -12,13 +12,13 @@ editor_options:
 ```{r}
 
 ```
-**Burden tests:**  
+**Burden tests: ### Header 3**  
 
 Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
 
 Limitations – less powerful in the presence of both trait increasing and decreasing variants or a small proportion of causal variants are often
 
-* CMC
+* **CMC**
 
 (a) Idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
 
