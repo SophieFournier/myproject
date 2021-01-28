@@ -12,7 +12,7 @@ editor_options:
 ```{r}
 
 ```
-### Header 3 **Burden tests:**  
+#### **Burden tests:** Header 4
 
 Strengths – are more powerful when there is a large proportion of variants are casual and effects are in the same direction
 
