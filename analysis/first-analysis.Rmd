@@ -38,13 +38,13 @@ Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
 
-**Adaptive Burden tests:** 
+##### **Adaptive Burden tests:** 
 
 Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation
 
 Limitations – are usually computationally intensive. VT requires the same assumptions as burden tests
 
-* aSum test 
+* **aSum test** 
 
 (a) Idea: The aSum test is also called an Adaptive sum test and it is the approach behind the adaptive test is to use the U-statistics of the score test in order to construct a statistic with the first components of the score vector U. 
 
@@ -60,13 +60,13 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
-**Variance-Component tests:** 
+##### **Variance-Component tests:** 
 
 Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants
 
 Limitations – are less powerful than burden tests when most variants are causal and effects are in the same direction
 
-* SKAT 
+* **SKAT** 
 
 (a) Idea: SKAT is a Sequencing Kernal Association Test which can be used to calculate p-values by fitting the null mode containing only the covariates and so it can easily be applied to genome-wide data.
 
@@ -82,7 +82,7 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
-* C-alpha test 
+* **C-alpha test** 
 
 (a) Idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.
 
@@ -98,13 +98,13 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
 
-**Combined tests:** 
+##### **Combined tests:** 
 
 Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.
 
 Limitations – can be slightly less powerful than burden or variance-component tests if their assumptions are largely held; some methods are computationally intensive like the Fisher method
 
-* SKAT-O 
+* **SKAT-O** 
 
 (a) Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
 
@@ -120,13 +120,13 @@ Y:
 
 X:
 
-**EC test:** 
+##### **EC test:** 
 
 Strengths – is powerful when a very small proportion of variants are causal
 
 Limitations – is computationally intensive; is less powerful when a moderate or large proportion of variants are causal
 
-* EC test 
+* **EC test** 
 
 (a) Idea:
 
