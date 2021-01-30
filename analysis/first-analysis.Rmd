@@ -26,9 +26,12 @@ Limitations – less powerful in the presence of both trait increasing and decre
 
 (c) R function
 
-Simple marker test equation:
-
 Multiple-marker test equation:
+  
+$$
+S = \frac{1}{N_A + N_A - 2}{\sum_{j = 1}^{N_A}{(x_i - \bar{x})(x_i - \bar{x})^T + \sum_{j = 1}^{N_\bar{A}{(Y_i - \bar{Y})(Y_i - \bar{Y})^T}
+$$
+Single-marker test equation:
 
 Hotelling's T2 test:
 
@@ -143,6 +146,7 @@ Y:
 X:
 
 Sources:
+
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/
