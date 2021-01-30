@@ -30,9 +30,9 @@ Single-marker test equation:
 
 Multiple-marker test equation:
   
-$$
+\begin{equation}
 S = \frac{1}{N_A + N_A - 2} {\sum_{j = 1}^{N_A}{(x_i - \bar{x})(x_i - \bar{x})^T + {\sum_{j = 1}^{N_\bar{A}}{(Y_j - \bar{Y})(Y - \bar{Y})^T}
-$$
+\begin{equation}
 
 Hotelling's T2 test:
 
