@@ -32,9 +32,9 @@ Multiple-marker test equation:
   
 $$S = \frac{1}{N_A + N_A - 2}{\sum_{j = 1}^{N_A}}{(x_j - \bar{x})(x_i - \bar{x})^T} + {\sum_{j = 1}^{N_\bar{A}}{(Y_j - \bar{Y})(Y - \bar{Y})^T}} $$
 
-Hotelling's T2 test:
+Hotelling's T^2 test:
 
-$$a^2 + b^2 = c^2$$
+$$T^2 = \frac{N_AN_\bar{A}}{N_A + N_\bar{A}}(\bar{X} - \bar{Y})^TS^{-1}(\bar{X} - \bar{Y})$$
 
 CMC(y, X, maf = 0.05, perm = 100) 
 
