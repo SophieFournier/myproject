@@ -142,7 +142,7 @@ Limitations – is computationally intensive; is less powerful when a moderate o
 
 (c) R function
 
-Equation:
+$$Q_{EC}=\sum_{j=1}^{m}exp(\frac{S_j^2}{2var(Sj)})$$
 
 Implementation
 
