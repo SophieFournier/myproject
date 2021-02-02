@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreec842ac1486dbd81f3814e5800b6cd675abe68a38targetblankc842ac1a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/c842ac1486dbd81f3814e5800b6cd675abe68a38" target="_blank">c842ac1</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeb4767c705d1da3fc1da803ff1df8d01ec76ab684targetblankb4767c7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/b4767c705d1da3fc1da803ff1df8d01ec76ab684" target="_blank">b4767c7</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreec842ac1486dbd81f3814e5800b6cd675abe68a38targetblankc842ac1a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeb4767c705d1da3fc1da803ff1df8d01ec76ab684targetblankb4767c7a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/c842ac1486dbd81f3814e5800b6cd675abe68a38" target="_blank">c842ac1</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/b4767c705d1da3fc1da803ff1df8d01ec76ab684" target="_blank">b4767c7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/b4767c705d1da3fc1da803ff1df8d01ec76ab684/analysis/first-analysis.Rmd" target="_blank">b4767c7</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-02
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/715fb69851599b3b69d50ecfffba089eae34f909/docs/first-analysis.html" target="_blank">715fb69</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1484,7 +1518,7 @@ Add my first analysis
 <li><p>Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.</p></li>
 <li><p>R function</p></li>
 </ol>
-<p>Equation:</p>
+<p><span class="math display">\[Q_{SKAT}=\sum_{j=1}^{m}w_j^2S_j^2\]</span></p>
 <p>SKAT(y, X, kernel = “linear”, weights = NULL, a = 1, b = 25, perm = NULL)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
@@ -1496,7 +1530,8 @@ Add my first analysis
 <li><p>Model:</p></li>
 <li><p>R function</p></li>
 </ol>
-<p>Binomial distribution equation:</p>
+<p><span class="math display">\[T=\sum_{i=1}^{m}[(y_i - n_ip_0)^2 - n_ip_0(1-p_0)]\]</span></p>
+<p><span class="math display">\[c=\sum_{n=2}^{max   n}m(n)\sum_{u=0}^{n}[(u-np_0)^2- np_0(1-p_0)]^2f(u|n,p_0)\]</span></p>
 <p>CALPHA(y, X, perm = NULL)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
