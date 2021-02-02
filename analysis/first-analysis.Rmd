@@ -120,7 +120,9 @@ Limitations – can be slightly less powerful than burden or variance-component 
 
 (c) R function
 
-Equation:
+$$Q_{optimal}=minp_p$$
+
+$$Q_{optimal}=min[p_{p_1},...,p_{p_b}]$$
 
 Implementation
 
