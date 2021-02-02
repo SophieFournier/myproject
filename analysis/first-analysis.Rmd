@@ -28,6 +28,8 @@ Limitations – less powerful in the presence of both trait increasing and decre
 
 Single-marker test equation:
 
+$$X_i^2 = N\frac{[p_i^D(aa) - p_i^N(aa)]^2}{p_i^D(aa)+p_i^N(aa)} + \frac{[p_i^D(Aa)+p_i^D(AA) - p_i^N(As) - p_i^N(AA)]^2}{p_i^D(Aa) +p_i^D(AA) + p_i^N(Aa) + p_i^N(AA)}$$
+
 Multiple-marker test equation:
   
 $$S = \frac{1}{N_A + N_A - 2}{{\sum_{j = 1}^{N_A}}{(x_j - \bar{x})(x_j - \bar{x})^T} + {\sum_{j = 1}^{N_\bar{A}}{(Y_j - \bar{Y})(Y_j - \bar{Y})^T}}} $$
@@ -56,7 +58,7 @@ Limitations – are usually computationally intensive. VT requires the same assu
 
 (c) R function
 
-Equation:
+$$aSum=(U-U_0)'V_0^{-1}(U-U_0)$$
 
 ASUM(y, X, perm = 100)
 
