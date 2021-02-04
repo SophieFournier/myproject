@@ -104,7 +104,7 @@ CALPHA(y, X, perm = NULL)
 
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 
-X: numeric matrix or data frame with genotype data coded as 0, 1, 2. 
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 ##### **Combined tests:** 
 
@@ -116,7 +116,7 @@ Limitations – can be slightly less powerful than burden or variance-component 
 
 (a) Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
 
-(b) Model:The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.
+(b) Model: The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.
 
 (c) R function
 
@@ -145,19 +145,19 @@ Limitations – is computationally intensive; is less powerful when a moderate o
 
 * **EC test** 
 
-(a) Idea:
+(a) Idea: The EC test, standing for exponential combination test, is general rather than a one test statistic and it combines individual variant statistics leading to the making of a set-based analysis. This test leads to powerful combination procedures.
 
-(b) Model:
+(b) Model: Large exponential weights may lead to low power when distinguishing the alternative from the null. When the alternative is less sparse, then it becomes a little more powerful.
 
 (c) R function
 
 $$Q_{EC}=\sum_{j=1}^{m}exp(\frac{S_j^2}{2var(Sj)})$$
 
-Implementation
+EC(y,X,perm = NULL)
 
-Y:
+Y:numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 
-X:
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 Sources:
 
@@ -180,3 +180,7 @@ https://rdrr.io/cran/AssotesteR/man/CALPHA.html
 https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322
 
 https://rdrr.io/cran/SKAT/man/SKAT.html
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415556/
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3516612/ 
