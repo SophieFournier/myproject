@@ -92,7 +92,7 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 (a) Idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.
 
-(b) Model:C-alpha is used to find patterns across a whole set of rare variants in a certain region. The distribution of counts follows a binomial distribution if alleles do not associate with any phenotype in the targeted region.
+(b) Model: C-alpha is used to find patterns across a whole set of rare variants in a certain region. The distribution of counts follows a binomial distribution if alleles do not associate with any phenotype in the targeted region.
 
 (c) R function
 
@@ -116,19 +116,26 @@ Limitations – can be slightly less powerful than burden or variance-component 
 
 (a) Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.
 
-(b) Model:
+(b) Model:The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.
 
 (c) R function
 
-$$Q_{optimal}=minp_p$$
+$$Q_{optimal}=min_{0<p<1}p_p$$
 
 $$Q_{optimal}=min[p_{p_1},...,p_{p_b}]$$
 
-Implementation
+SKAT(Z, obj, kernel = "linear.weighted", 
+  method="davies", weights.beta=c(1,25), weights=NULL, 
+  impute.method="fixed", r.corr=0, is_check_genotype=TRUE,
+  is_dosage = FALSE, missing_cutoff=0.15 , max_maf=1, estimate_MAF=1)
 
-Y:
+SKAT.SSD.OneSet(SSD.INFO, SetID, obj, ... ,obj.SNPWeight=NULL)
 
-X:
+SKAT.SSD.OneSet_SetIndex(SSD.INFO, SetIndex, obj, ... ,obj.SNPWeight=NULL)
+
+Method="SKATO"
+
+Method="optimal.adj"
 
 ##### **EC test:** 
 
@@ -171,3 +178,5 @@ https://rdrr.io/cran/AssotesteR/man/SKAT.html
 https://rdrr.io/cran/AssotesteR/man/CALPHA.html
 
 https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322
+
+https://rdrr.io/cran/SKAT/man/SKAT.html
