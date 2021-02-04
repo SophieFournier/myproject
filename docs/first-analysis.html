@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed7a9be6f59539988150692b7672fc71fee452f02targetblankd7a9be6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/d7a9be6f59539988150692b7672fc71fee452f02" target="_blank">d7a9be6</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreef366fa9c51eed5d5d0ceea1dd366b73b4183dff7targetblankf366fa9a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/f366fa9c51eed5d5d0ceea1dd366b73b4183dff7" target="_blank">f366fa9</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed7a9be6f59539988150692b7672fc71fee452f02targetblankd7a9be6a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreef366fa9c51eed5d5d0ceea1dd366b73b4183dff7targetblankf366fa9a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/d7a9be6f59539988150692b7672fc71fee452f02" target="_blank">d7a9be6</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/f366fa9c51eed5d5d0ceea1dd366b73b4183dff7" target="_blank">f366fa9</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/f366fa9c51eed5d5d0ceea1dd366b73b4183dff7/analysis/first-analysis.Rmd" target="_blank">f366fa9</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-04
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/7281d2c589f6322ef75294a70806b3f41888909a/docs/first-analysis.html" target="_blank">7281d2c</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-04
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1681,7 +1715,7 @@ Add my first analysis
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.</p></li>
-<li><p>Model:The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.</p></li>
+<li><p>Model: The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.</p></li>
 <li><p>R function</p></li>
 </ol>
 <p><span class="math display">\[Q_{optimal}=min_{0&lt;p&lt;1}p_p\]</span></p>
@@ -1700,14 +1734,14 @@ Add my first analysis
 <li><strong>EC test</strong></li>
 </ul>
 <ol style="list-style-type: lower-alpha">
-<li><p>Idea:</p></li>
-<li><p>Model:</p></li>
+<li><p>Idea: The EC test, standing for exponential combination test, is general rather than a one test statistic and it combines individual variant statistics leading to the making of a set-based analysis. This test leads to powerful combination procedures.</p></li>
+<li><p>Model: Large exponential weights may lead to low power when distinguishing the alternative from the null. When the alternative is less sparse, then it becomes a little more powerful.</p></li>
 <li><p>R function</p></li>
 </ol>
 <p><span class="math display">\[Q_{EC}=\sum_{j=1}^{m}exp(\frac{S_j^2}{2var(Sj)})\]</span></p>
-<p>Implementation</p>
-<p>Y:</p>
-<p>X:</p>
+<p>EC(y,X,perm = NULL)</p>
+<p>Y:numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
+<p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
 <p>Sources:</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/</a></p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/</a></p>
@@ -1719,6 +1753,8 @@ Add my first analysis
 <p><a href="https://rdrr.io/cran/AssotesteR/man/CALPHA.html" class="uri">https://rdrr.io/cran/AssotesteR/man/CALPHA.html</a></p>
 <p><a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322" class="uri">https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322</a></p>
 <p><a href="https://rdrr.io/cran/SKAT/man/SKAT.html" class="uri">https://rdrr.io/cran/SKAT/man/SKAT.html</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415556/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415556/</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3516612/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3516612/</a></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
