@@ -427,7 +427,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-02
+<strong>Last updated:</strong> 2021-02-04
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreefd47765d7b7dbaaec4a18d5ecfaaa837077c83f8targetblankfd47765a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/fd47765d7b7dbaaec4a18d5ecfaaa837077c83f8" target="_blank">fd47765</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed7a9be6f59539988150692b7672fc71fee452f02targetblankd7a9be6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/d7a9be6f59539988150692b7672fc71fee452f02" target="_blank">d7a9be6</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreefd47765d7b7dbaaec4a18d5ecfaaa837077c83f8targetblankfd47765a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed7a9be6f59539988150692b7672fc71fee452f02targetblankd7a9be6a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/fd47765d7b7dbaaec4a18d5ecfaaa837077c83f8" target="_blank">fd47765</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/d7a9be6f59539988150692b7672fc71fee452f02" target="_blank">d7a9be6</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/d7a9be6f59539988150692b7672fc71fee452f02/analysis/first-analysis.Rmd" target="_blank">d7a9be6</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-04
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/bae27e479fa30548993168e68ab31fff4875bc12/docs/first-analysis.html" target="_blank">bae27e4</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1629,7 +1663,7 @@ Add my first analysis
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: C-alpha tests allow for consistent and/or increased power and straightforward calculations when testing the variance of a set containing both protective and risk variants.</p></li>
-<li><p>Model:C-alpha is used to find patterns across a whole set of rare variants in a certain region. The distribution of counts follows a binomial distribution if alleles do not associate with any phenotype in the targeted region.</p></li>
+<li><p>Model: C-alpha is used to find patterns across a whole set of rare variants in a certain region. The distribution of counts follows a binomial distribution if alleles do not associate with any phenotype in the targeted region.</p></li>
 <li><p>R function</p></li>
 </ol>
 <p><span class="math display">\[T=\sum_{i=1}^{m}[(y_i - n_ip_0)^2 - n_ip_0(1-p_0)]\]</span></p>
@@ -1647,14 +1681,16 @@ Add my first analysis
 </ul>
 <ol style="list-style-type: lower-alpha">
 <li><p>Idea: SKAT-O is part of the extended family of SKAT and it is optimal unified test. This test doesn’t need to be resampled when computing asymptotic p values and it is easy to adjust to covariates.</p></li>
-<li><p>Model:</p></li>
+<li><p>Model:The Qoptimal test, also know as the optimal unified test can be calculated to find the p-value by simply using a one-dimensional numerical integration. When the trait is binary, the sample sizes are small and the p-values have produced more conservative results, then this can lead to incorrect type I error and a loss of power.</p></li>
 <li><p>R function</p></li>
 </ol>
-<p><span class="math display">\[Q_{optimal}=minp_p\]</span></p>
+<p><span class="math display">\[Q_{optimal}=min_{0&lt;p&lt;1}p_p\]</span></p>
 <p><span class="math display">\[Q_{optimal}=min[p_{p_1},...,p_{p_b}]\]</span></p>
-<p>Implementation</p>
-<p>Y:</p>
-<p>X:</p>
+<p>SKAT(Z, obj, kernel = “linear.weighted”, method=“davies”, weights.beta=c(1,25), weights=NULL, impute.method=“fixed”, r.corr=0, is_check_genotype=TRUE, is_dosage = FALSE, missing_cutoff=0.15 , max_maf=1, estimate_MAF=1)</p>
+<p>SKAT.SSD.OneSet(SSD.INFO, SetID, obj, … ,obj.SNPWeight=NULL)</p>
+<p>SKAT.SSD.OneSet_SetIndex(SSD.INFO, SetIndex, obj, … ,obj.SNPWeight=NULL)</p>
+<p>Method=“SKATO”</p>
+<p>Method=“optimal.adj”</p>
 </div>
 <div id="ec-test" class="section level5">
 <h5><strong>EC test:</strong></h5>
@@ -1682,6 +1718,7 @@ Add my first analysis
 <p><a href="https://rdrr.io/cran/AssotesteR/man/SKAT.html" class="uri">https://rdrr.io/cran/AssotesteR/man/SKAT.html</a></p>
 <p><a href="https://rdrr.io/cran/AssotesteR/man/CALPHA.html" class="uri">https://rdrr.io/cran/AssotesteR/man/CALPHA.html</a></p>
 <p><a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322" class="uri">https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001322</a></p>
+<p><a href="https://rdrr.io/cran/SKAT/man/SKAT.html" class="uri">https://rdrr.io/cran/SKAT/man/SKAT.html</a></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
