@@ -20,11 +20,24 @@ Limitations – less powerful in the presence of both trait increasing and decre
 
 * **CMC**
 
-(a) Idea: that uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
+(a) Idea: CMC method, also known as Combined Multivariate and Collapsing Method, uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.
 
 (b) Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data. 
 
 (c) R function
+
+(d) Examples
+
+CMC: Combined Multivariate and Collapsing Method 
+
+Info: 
+   cases  controls  variants  
+     500       500        10  
+ rarevar       maf      perm  
+       5      0.05       500  
+
+ cmc.stat   asym.pval   perm.pval   
+ 1.767877    0.940315    0.940000 
 
 Single-marker test equation:
 
@@ -37,8 +50,6 @@ $$S = \frac{1}{N_A + N_A - 2}{{\sum_{j = 1}^{N_A}}{(x_j - \bar{x})(x_j - \bar{x}
 Hotelling's T^2 test:
 
 $$T^2 = \frac{N_AN_\bar{A}}{N_A + N_\bar{A}}(\bar{X} - \bar{Y})^TS^{-1}(\bar{X} - \bar{Y})$$
-
-CMC(y, X, maf = 0.05, perm = 100) 
 
 Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.
 
