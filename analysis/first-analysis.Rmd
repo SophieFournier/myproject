@@ -26,19 +26,6 @@ Limitations – less powerful in the presence of both trait increasing and decre
 
 (c) R function
 
-(d) Examples
-
-CMC: Combined Multivariate and Collapsing Method 
-
-Info: 
-   cases  controls  variants  
-     500       500        10  
- rarevar       maf      perm  
-       5      0.05       500  
-
- cmc.stat   asym.pval   perm.pval   
- 1.767877    0.940315    0.940000 
-
 Single-marker test equation:
 
 $$X_i^2 = N\frac{[p_i^D(aa) - p_i^N(aa)]^2}{p_i^D(aa)+p_i^N(aa)} + \frac{[p_i^D(Aa)+p_i^D(AA) - p_i^N(As) - p_i^N(AA)]^2}{p_i^D(Aa) +p_i^D(AA) + p_i^N(Aa) + p_i^N(AA)}$$
@@ -53,7 +40,20 @@ $$T^2 = \frac{N_AN_\bar{A}}{N_A + N_\bar{A}}(\bar{X} - \bar{Y})^TS^{-1}(\bar{X} 
 
 Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.
 
-X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed. 
+X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed.
+
+(d) Example
+
+ CMC: Combined Multivariate and Collapsing Method 
+
+Info: 
+   cases  controls  variants  
+     500       500        10  
+ rarevar       maf      perm  
+       5      0.05       500  
+
+ cmc.stat   asym.pval   perm.pval   
+ 1.767877    0.940315    0.940000
 
 ##### **Adaptive Burden tests:** 
 
@@ -77,6 +77,19 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed
 
+(d) Example
+
+ASUM: Adaptive Sum Test 
+
+Info: 
+   cases  controls  variants  
+     500       500        10  
+ n.perms  
+     500  
+
+asum.stat   perm.pval   
+-1.167671    0.650000 
+
 ##### **Variance-Component tests:** 
 
 Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants
@@ -90,7 +103,7 @@ Limitations – are less powerful than burden tests when most variants are causa
 (b) Model: SKAT tests have a relationship between variants and the phenotype by using classical multiple linear and logistic regression.
 
 (c) R function
-
+ 
 $$Q_{SKAT}=\sum_{j=1}^{m}w_j^2S_j^2$$
 
 SKAT(y, X, kernel = "linear", weights = NULL, a = 1, b = 25, perm = NULL) 
@@ -98,6 +111,56 @@ SKAT(y, X, kernel = "linear", weights = NULL, a = 1, b = 25, perm = NULL)
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
+
+(d) Examples
+
+SKAT: Sequence Kernel Association Test 
+
+Info: 
+   cases  controls  variants  
+    1000      1000        20  
+ n.perms    kernel  
+    NULL    linear  
+
+skat.stat   asym.pval   perm.pval   
+571.75000     0.26249          NA  
+
+SKAT: Sequence Kernel Association Test 
+
+Info: 
+   cases  controls  variants  
+    1000      1000        20  
+ n.perms    kernel  
+    NULL   wlinear  
+
+   skat.stat      asym.pval   
+27834.518115       0.345633   
+   perm.pval   
+          NA 
+          
+ SKAT: Sequence Kernel Association Test 
+
+Info: 
+    cases   controls   variants  
+     1000       1000         20  
+  n.perms     kernel  
+     NULL  quadratic  
+
+  skat.stat     asym.pval   
+2894.750000      0.351836   
+  perm.pval   
+         NA          
+
+SKAT: Sequence Kernel Association Test 
+
+Info: 
+   cases  controls  variants  
+    1000      1000        20  
+ n.perms    kernel  
+    NULL       IBS  
+
+skat.stat   asym.pval   perm.pval   
+ 25.65000     0.31155          NA 
 
 * **C-alpha test** 
 
@@ -116,6 +179,21 @@ CALPHA(y, X, perm = NULL)
 Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
+
+(d) Example
+
+CALPHA: c-alpha Test 
+
+Info: 
+   cases  controls  variants  
+     500       500        10  
+ n.perms  
+     500  
+
+calpha.stat     asym.pval   
+-348.500000      0.093765   
+  perm.pval   
+   0.036000 
 
 ##### **Combined tests:** 
 
@@ -148,6 +226,8 @@ Method="SKATO"
 
 Method="optimal.adj"
 
+(d) Example
+
 ##### **EC test:** 
 
 Strengths – is powerful when a very small proportion of variants are causal
@@ -169,6 +249,8 @@ EC(y,X,perm = NULL)
 Y:numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed
 
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
+
+(d) Example
 
 Sources:
 
