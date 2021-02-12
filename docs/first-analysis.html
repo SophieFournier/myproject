@@ -427,7 +427,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-11
+<strong>Last updated:</strong> 2021-02-12
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeab90f2749e3702cb748324633d7b344bdbaaa82atargetblankab90f27a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/ab90f2749e3702cb748324633d7b344bdbaaa82a" target="_blank">ab90f27</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8e1d5607a69ae5dba9bd004fc8d7c1bcc37f0d21targetblank8e1d560a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/8e1d5607a69ae5dba9bd004fc8d7c1bcc37f0d21" target="_blank">8e1d560</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeab90f2749e3702cb748324633d7b344bdbaaa82atargetblankab90f27a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8e1d5607a69ae5dba9bd004fc8d7c1bcc37f0d21targetblank8e1d560a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/ab90f2749e3702cb748324633d7b344bdbaaa82a" target="_blank">ab90f27</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/8e1d5607a69ae5dba9bd004fc8d7c1bcc37f0d21" target="_blank">8e1d560</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/8e1d5607a69ae5dba9bd004fc8d7c1bcc37f0d21/analysis/first-analysis.Rmd" target="_blank">8e1d560</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-12
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/29d867c3a1c89e5d7ae2aa7ed05a2e4f9d44c15e/docs/first-analysis.html" target="_blank">29d867c</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1682,15 +1716,7 @@ Add my first analysis
 <li><p>Idea: CMC method, also known as Combined Multivariate and Collapsing Method, uses allele frequencies to determine the divisions of the variants into groups. After the rare are selected, they are collapsed into an indicator variable and then a multivariate test is applied to the collection formed by the common variants and the collapsed variant.</p></li>
 <li><p>Model: For the CMC method, markers are divided into subgroups. (e.g. allele frequencies), and within each group, marker data are collapsed. A multivariate test (e.g. Hotelling’s T2 test) is then applied for analysis of the groups of marker data.</p></li>
 <li><p>R function</p></li>
-<li><p>Examples</p></li>
 </ol>
-<p>CMC: Combined Multivariate and Collapsing Method</p>
-<p>Info: cases controls variants<br />
-500 500 10<br />
-rarevar maf perm<br />
-5 0.05 500</p>
-<p>cmc.stat asym.pval perm.pval<br />
-1.767877 0.940315 0.940000</p>
 <p>Single-marker test equation:</p>
 <p><span class="math display">\[X_i^2 = N\frac{[p_i^D(aa) - p_i^N(aa)]^2}{p_i^D(aa)+p_i^N(aa)} + \frac{[p_i^D(Aa)+p_i^D(AA) - p_i^N(As) - p_i^N(AA)]^2}{p_i^D(Aa) +p_i^D(AA) + p_i^N(Aa) + p_i^N(AA)}\]</span></p>
 <p>Multiple-marker test equation:</p>
@@ -1699,6 +1725,16 @@ rarevar maf perm<br />
 <p><span class="math display">\[T^2 = \frac{N_AN_\bar{A}}{N_A + N_\bar{A}}(\bar{X} - \bar{Y})^TS^{-1}(\bar{X} - \bar{Y})\]</span></p>
 <p>Y: Numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed.</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Example</li>
+</ol>
+<p>CMC: Combined Multivariate and Collapsing Method</p>
+<p>Info: cases controls variants<br />
+500 500 10<br />
+rarevar maf perm<br />
+5 0.05 500</p>
+<p>cmc.stat asym.pval perm.pval<br />
+1.767877 0.940315 0.940000</p>
 </div>
 <div id="adaptive-burden-tests" class="section level5">
 <h5><strong>Adaptive Burden tests:</strong></h5>
@@ -1716,6 +1752,16 @@ rarevar maf perm<br />
 <p>ASUM(y, X, perm = 100)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing data is allowed</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Example</li>
+</ol>
+<p>ASUM: Adaptive Sum Test</p>
+<p>Info: cases controls variants<br />
+500 500 10<br />
+n.perms<br />
+500</p>
+<p>asum.stat perm.pval<br />
+-1.167671 0.650000</p>
 </div>
 <div id="variance-component-tests" class="section level5">
 <h5><strong>Variance-Component tests:</strong></h5>
@@ -1733,6 +1779,41 @@ rarevar maf perm<br />
 <p>SKAT(y, X, kernel = “linear”, weights = NULL, a = 1, b = 25, perm = NULL)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Examples</li>
+</ol>
+<p>SKAT: Sequence Kernel Association Test</p>
+<p>Info: cases controls variants<br />
+1000 1000 20<br />
+n.perms kernel<br />
+NULL linear</p>
+<p>skat.stat asym.pval perm.pval<br />
+571.75000 0.26249 NA</p>
+<p>SKAT: Sequence Kernel Association Test</p>
+<p>Info: cases controls variants<br />
+1000 1000 20<br />
+n.perms kernel<br />
+NULL wlinear</p>
+<p>skat.stat asym.pval<br />
+27834.518115 0.345633<br />
+perm.pval<br />
+NA</p>
+<p>SKAT: Sequence Kernel Association Test</p>
+<p>Info: cases controls variants<br />
+1000 1000 20<br />
+n.perms kernel<br />
+NULL quadratic</p>
+<p>skat.stat asym.pval<br />
+2894.750000 0.351836<br />
+perm.pval<br />
+NA</p>
+<p>SKAT: Sequence Kernel Association Test</p>
+<p>Info: cases controls variants<br />
+1000 1000 20<br />
+n.perms kernel<br />
+NULL IBS</p>
+<p>skat.stat asym.pval perm.pval<br />
+25.65000 0.31155 NA</p>
 <ul>
 <li><strong>C-alpha test</strong></li>
 </ul>
@@ -1746,6 +1827,18 @@ rarevar maf perm<br />
 <p>CALPHA(y, X, perm = NULL)</p>
 <p>Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Example</li>
+</ol>
+<p>CALPHA: c-alpha Test</p>
+<p>Info: cases controls variants<br />
+500 500 10<br />
+n.perms<br />
+500</p>
+<p>calpha.stat asym.pval<br />
+-348.500000 0.093765<br />
+perm.pval<br />
+0.036000</p>
 </div>
 <div id="combined-tests" class="section level5">
 <h5><strong>Combined tests:</strong></h5>
@@ -1766,6 +1859,9 @@ rarevar maf perm<br />
 <p>SKAT.SSD.OneSet_SetIndex(SSD.INFO, SetIndex, obj, … ,obj.SNPWeight=NULL)</p>
 <p>Method=“SKATO”</p>
 <p>Method=“optimal.adj”</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Example</li>
+</ol>
 </div>
 <div id="ec-test" class="section level5">
 <h5><strong>EC test:</strong></h5>
@@ -1783,6 +1879,9 @@ rarevar maf perm<br />
 <p>EC(y,X,perm = NULL)</p>
 <p>Y:numeric vector with phenotype status: 0=controls, 1=cases. No missing data allowed</p>
 <p>X: numeric matrix or data frame with genotype data coded as 0, 1, 2.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Example</li>
+</ol>
 <p>Sources:</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/</a></p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2842185/</a></p>
