@@ -427,7 +427,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-13
+<strong>Last updated:</strong> 2021-02-21
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreef9434facba6b19fb5a98a119f28f47d0cfe0ad81targetblankf9434faa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/f9434facba6b19fb5a98a119f28f47d0cfe0ad81" target="_blank">f9434fa</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeba92fcd236833e459f07bdc09048fa1687292908targetblankba92fcda"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/ba92fcd236833e459f07bdc09048fa1687292908" target="_blank">ba92fcd</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreef9434facba6b19fb5a98a119f28f47d0cfe0ad81targetblankf9434faa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreeba92fcd236833e459f07bdc09048fa1687292908targetblankba92fcda" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/f9434facba6b19fb5a98a119f28f47d0cfe0ad81" target="_blank">f9434fa</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/ba92fcd236833e459f07bdc09048fa1687292908" target="_blank">ba92fcd</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/ba92fcd236833e459f07bdc09048fa1687292908/analysis/first-analysis.Rmd" target="_blank">ba92fcd</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-21
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/575bda5af210d2636e4dc5275c941ceebb10eb39/docs/first-analysis.html" target="_blank">575bda5</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1796,6 +1830,7 @@ Add my first analysis
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
+<p>’’’{r, echo=T} ## Not run: # number of cases cases = 500 # number of controls controls = 500 # total (cases + controls) total = cases + controls # phenotype vector phenotype = c(rep(1,cases), rep(0,controls)) # genotype matrix with 10 variants (random data) set.seed(1234) genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10) # apply CMC with maf=0.05 and 500 permutations mycmc = CMC(phenotype, genotype, maf=0.05, perm=500) mycmc ## End(Not run)</p>
 <p>CMC: Combined Multivariate and Collapsing Method</p>
 <p>Info:</p>
 <p>cases controls variants<br />
