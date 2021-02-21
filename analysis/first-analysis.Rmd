@@ -44,6 +44,24 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing dat
 
 (d) Example
 
+'''{r, echo=T}
+## Not run:
+# number of cases
+cases = 500
+# number of controls
+controls = 500
+# total (cases + controls)
+total = cases + controls
+# phenotype vector
+phenotype = c(rep(1,cases), rep(0,controls))
+# genotype matrix with 10 variants (random data)
+set.seed(1234)
+genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)
+# apply CMC with maf=0.05 and 500 permutations
+mycmc = CMC(phenotype, genotype, maf=0.05, perm=500)
+mycmc
+## End(Not run)
+
  CMC: Combined Multivariate and Collapsing Method 
 
 Info:
