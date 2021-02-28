@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed9306f9d26065eb2dab1ed7130ba97b3236ed4c7targetblankd9306f9a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/d9306f9d26065eb2dab1ed7130ba97b3236ed4c7" target="_blank">d9306f9</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8be31138a590233ebd96b4b66b4939b9d0e9cabatargetblank8be3113a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/8be31138a590233ebd96b4b66b4939b9d0e9caba" target="_blank">8be3113</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreed9306f9d26065eb2dab1ed7130ba97b3236ed4c7targetblankd9306f9a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8be31138a590233ebd96b4b66b4939b9d0e9cabatargetblank8be3113a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/d9306f9d26065eb2dab1ed7130ba97b3236ed4c7" target="_blank">d9306f9</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/8be31138a590233ebd96b4b66b4939b9d0e9caba" target="_blank">8be3113</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/8be31138a590233ebd96b4b66b4939b9d0e9caba/analysis/first-analysis.Rmd" target="_blank">8be3113</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/b6670e1ac3c7356869dc9ffbfa53a141c974d3f1/docs/first-analysis.html" target="_blank">b6670e1</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1932,30 +1966,17 @@ Add my first analysis
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-</div>
-</div>
-<div id="number-of-cases" class="section level1">
-<h1>number of cases</h1>
+<p># number of cases</p>
 <p>cases = 500</p>
-</div>
-<div id="number-of-controls" class="section level1">
-<h1>number of controls</h1>
+<p># number of controls</p>
 <p>controls = 500</p>
-</div>
-<div id="total-cases-controls" class="section level1">
-<h1>total (cases + controls)</h1>
+<p># total (cases + controls)</p>
 <p>total = cases + controls</p>
-</div>
-<div id="phenotype-vector" class="section level1">
-<h1>phenotype vector</h1>
+<p># phenotype vector</p>
 <p>phenotype = c(rep(1,cases), rep(0,controls))</p>
-</div>
-<div id="genotype-matrix-with-10-variants-random-data-set.seed1234" class="section level1">
-<h1>genotype matrix with 10 variants (random data) set.seed(1234)</h1>
+<p># genotype matrix with 10 variants (random data) set.seed(1234)</p>
 <p>genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)</p>
-</div>
-<div id="apply-cmc-with-maf0.05-and-500-permutations" class="section level1">
-<h1>apply CMC with maf=0.05 and 500 permutations</h1>
+<p># apply CMC with maf=0.05 and 500 permutations</p>
 <p>mycmc = CMC(phenotype, genotype, maf=0.05, perm=500) mycmc</p>
 <p>CMC: Combined Multivariate and Collapsing Method</p>
 <p>Info:</p>
@@ -1965,6 +1986,7 @@ rarevar maf perm<br />
 5 0.05 500</p>
 <p>cmc.stat asym.pval perm.pval<br />
 1.767877 0.940315 0.940000</p>
+</div>
 <div id="adaptive-burden-tests" class="section level5">
 <h5><strong>Adaptive Burden tests:</strong></h5>
 <p>Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation</p>
@@ -1985,29 +2007,29 @@ rarevar maf perm<br />
 <li>Example</li>
 </ol>
 </div>
+</div>
 <div id="not-run" class="section level2">
 <h2>Not run:</h2>
 </div>
-</div>
-<div id="number-of-cases-1" class="section level1">
+<div id="number-of-cases" class="section level1">
 <h1># number of cases</h1>
 </div>
 <div id="cases-500" class="section level1">
 <h1>cases = 500</h1>
 </div>
-<div id="number-of-controls-1" class="section level1">
+<div id="number-of-controls" class="section level1">
 <h1># number of controls</h1>
 </div>
 <div id="controls-500" class="section level1">
 <h1>controls = 500</h1>
 </div>
-<div id="total-cases-controls-1" class="section level1">
+<div id="total-cases-controls" class="section level1">
 <h1># total (cases + controls)</h1>
 </div>
-<div id="total-cases-controls-2" class="section level1">
+<div id="total-cases-controls-1" class="section level1">
 <h1>total = cases + controls</h1>
 </div>
-<div id="phenotype-vector-1" class="section level1">
+<div id="phenotype-vector" class="section level1">
 <h1># phenotype vector</h1>
 </div>
 <div id="phenotype-crep1-cases-rep0-controls" class="section level1">
@@ -2163,25 +2185,25 @@ NULL IBS</p>
 <h2>Not run:</h2>
 </div>
 </div>
-<div id="number-of-cases-2" class="section level1">
+<div id="number-of-cases-1" class="section level1">
 <h1># number of cases</h1>
 </div>
 <div id="cases-500-1" class="section level1">
 <h1>cases = 500</h1>
 </div>
-<div id="number-of-controls-2" class="section level1">
+<div id="number-of-controls-1" class="section level1">
 <h1># number of controls</h1>
 </div>
 <div id="controls-500-1" class="section level1">
 <h1>controls = 500</h1>
 </div>
-<div id="total-cases-controls-3" class="section level1">
+<div id="total-cases-controls-2" class="section level1">
 <h1># total (cases + controls)</h1>
 </div>
-<div id="total-cases-controls-4" class="section level1">
+<div id="total-cases-controls-3" class="section level1">
 <h1>total = cases + controls</h1>
 </div>
-<div id="phenotype-vector-2" class="section level1">
+<div id="phenotype-vector-1" class="section level1">
 <h1># phenotype vector</h1>
 </div>
 <div id="phenotype-crep1cases-rep0controls" class="section level1">
