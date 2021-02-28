@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8be31138a590233ebd96b4b66b4939b9d0e9cabatargetblank8be3113a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/8be31138a590233ebd96b4b66b4939b9d0e9caba" target="_blank">8be3113</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree41cde53905835c9f41f54c0bafb9d8d15677ddc0targetblank41cde53a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/41cde53905835c9f41f54c0bafb9d8d15677ddc0" target="_blank">41cde53</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree8be31138a590233ebd96b4b66b4939b9d0e9cabatargetblank8be3113a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree41cde53905835c9f41f54c0bafb9d8d15677ddc0targetblank41cde53a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/8be31138a590233ebd96b4b66b4939b9d0e9caba" target="_blank">8be3113</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/41cde53905835c9f41f54c0bafb9d8d15677ddc0" target="_blank">41cde53</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/41cde53905835c9f41f54c0bafb9d8d15677ddc0/analysis/first-analysis.Rmd" target="_blank">41cde53</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/873c6525de6c910b2057f79f13bcdf404a68bad7/docs/first-analysis.html" target="_blank">873c652</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1966,6 +2000,7 @@ Add my first analysis
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
+<p>## Not run:</p>
 <p># number of cases</p>
 <p>cases = 500</p>
 <p># number of controls</p>
@@ -1978,6 +2013,7 @@ Add my first analysis
 <p>genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)</p>
 <p># apply CMC with maf=0.05 and 500 permutations</p>
 <p>mycmc = CMC(phenotype, genotype, maf=0.05, perm=500) mycmc</p>
+<p>## End(Not run)</p>
 <p>CMC: Combined Multivariate and Collapsing Method</p>
 <p>Info:</p>
 <p>cases controls variants<br />
@@ -2006,54 +2042,22 @@ rarevar maf perm<br />
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-</div>
-</div>
-<div id="not-run" class="section level2">
-<h2>Not run:</h2>
-</div>
-<div id="number-of-cases" class="section level1">
-<h1># number of cases</h1>
-</div>
-<div id="cases-500" class="section level1">
-<h1>cases = 500</h1>
-</div>
-<div id="number-of-controls" class="section level1">
-<h1># number of controls</h1>
-</div>
-<div id="controls-500" class="section level1">
-<h1>controls = 500</h1>
-</div>
-<div id="total-cases-controls" class="section level1">
-<h1># total (cases + controls)</h1>
-</div>
-<div id="total-cases-controls-1" class="section level1">
-<h1>total = cases + controls</h1>
-</div>
-<div id="phenotype-vector" class="section level1">
-<h1># phenotype vector</h1>
-</div>
-<div id="phenotype-crep1-cases-rep0-controls" class="section level1">
-<h1>phenotype = c(rep(1, cases), rep(0, controls))</h1>
-</div>
-<div id="genotype-matrix-with-10-variants-random-data-set.seed123" class="section level1">
-<h1># genotype matrix with 10 variants (random data) set.seed(123)</h1>
-</div>
-<div id="genotype-matrixrbinomtotal10-2-0.05-nrowtotal-ncol10" class="section level1">
-<h1>genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)</h1>
-</div>
-<div id="apply-asum-with-500-permutations" class="section level1">
-<h1># apply ASUM with 500 permutations</h1>
-</div>
-<div id="myasum-asumphenotype-genotype-perm500-myasum" class="section level1">
-<h1>myasum = ASUM(phenotype, genotype, perm=500) myasum</h1>
-</div>
-<div id="apply-asum.ord-with-500-permutations" class="section level1">
-<h1># apply ASUM.Ord with 500 permutations</h1>
-</div>
-<div id="myasumord-assu.ordphenotype-genotype-perm500-myasumord" class="section level1">
-<h1>myasumord = ASSU.Ord(phenotype, genotype, perm=500) myasumord</h1>
-<div id="endnot-run" class="section level2">
-<h2>End(Not run)</h2>
+<p>## Not run:</p>
+<p># number of cases</p>
+<p>cases = 500</p>
+<p># number of controls</p>
+<p>controls = 500</p>
+<p># total (cases + controls)</p>
+<p>total = cases + controls</p>
+<p># phenotype vector</p>
+<p>phenotype = c(rep(1, cases), rep(0, controls))</p>
+<p># genotype matrix with 10 variants (random data) set.seed(123)</p>
+<p>genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)</p>
+<p># apply ASUM with 500 permutations</p>
+<p>myasum = ASUM(phenotype, genotype, perm=500) myasum</p>
+<p># apply ASUM.Ord with 500 permutations</p>
+<p>myasumord = ASSU.Ord(phenotype, genotype, perm=500) myasumord</p>
+<p>## End(Not run)</p>
 <p>ASUM: Adaptive Sum Test</p>
 <p>Info: cases controls variants<br />
 500 500 10<br />
@@ -2061,6 +2065,7 @@ n.perms<br />
 500</p>
 <p>asum.stat perm.pval<br />
 -1.167671 0.650000</p>
+</div>
 <div id="variance-component-tests" class="section level5">
 <h5><strong>Variance-Component tests:</strong></h5>
 <p>Strengths – are powerful in the presence of both trait increasing and decreasing variants or a small amount of causal variants</p>
@@ -2080,58 +2085,23 @@ n.perms<br />
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Examples</li>
 </ol>
-</div>
-</div>
-<div id="not-run-1" class="section level2">
-<h2>Not run:</h2>
-</div>
-</div>
-<div id="load-data-genodata" class="section level1">
-<h1># load data genodata</h1>
-</div>
-<div id="datagenodata" class="section level1">
-<h1>data(genodata)</h1>
-</div>
-<div id="phenotype-first-column-of-genodata" class="section level1">
-<h1># phenotype (first column of genodata)</h1>
-</div>
-<div id="pheno-genodata1" class="section level1">
-<h1>pheno = genodata[,1]</h1>
-</div>
-<div id="genotype-rest-of-columns-of-genodata" class="section level1">
-<h1># genotype (rest of columns of genodata)</h1>
-</div>
-<div id="geno-genodata-1" class="section level1">
-<h1>geno = genodata[,-1]</h1>
-</div>
-<div id="apply-skat-with-linear-kernel" class="section level1">
-<h1># apply SKAT with linear kernel</h1>
-</div>
-<div id="myskat.linear-skatpheno-geno-kernellinear-myskat.linear" class="section level1">
-<h1>myskat.linear = SKAT(pheno, geno, kernel=“linear”) myskat.linear</h1>
-</div>
-<div id="apply-skat-with-weighted-linear-kernel" class="section level1">
-<h1># apply SKAT with weighted linear kernel</h1>
-</div>
-<div id="weights-estimated-from-distribution-betamaf-a1-b25" class="section level1">
-<h1># weights estimated from distribution beta(MAF, a=1, b=25)</h1>
-</div>
-<div id="myskat.wlinear-skatpheno-geno-kernelwlinear-a1-b25-myskat.wlinear" class="section level1">
-<h1>myskat.wlinear = SKAT(pheno, geno, kernel=“wlinear”, a=1, b=25) myskat.wlinear</h1>
-</div>
-<div id="apply-skat-with-quadratic-kernel" class="section level1">
-<h1># apply SKAT with quadratic kernel</h1>
-</div>
-<div id="myskat.quad-skatpheno-geno-kernelquadratic-myskat.quad" class="section level1">
-<h1>myskat.quad = SKAT(pheno, geno, kernel=“quadratic”) myskat.quad</h1>
-</div>
-<div id="apply-skat-with-ibs-kernel" class="section level1">
-<h1># apply SKAT with IBS kernel</h1>
-</div>
-<div id="myskat.ibs-skatpheno-geno-kernelibs-myskat.ibs" class="section level1">
-<h1>myskat.ibs = SKAT(pheno, geno, kernel=“IBS”) myskat.ibs</h1>
-<div id="endnot-run-1" class="section level2">
-<h2>End(Not run)</h2>
+<p>## Not run:</p>
+<p># load data genodata</p>
+<p>data(genodata)</p>
+<p># phenotype (first column of genodata)</p>
+<p>pheno = genodata[,1]</p>
+<p># genotype (rest of columns of genodata)</p>
+<p>geno = genodata[,-1]</p>
+<p># apply SKAT with linear kernel</p>
+<p>myskat.linear = SKAT(pheno, geno, kernel=“linear”) myskat.linear</p>
+<p># apply SKAT with weighted linear kernel</p>
+<p># weights estimated from distribution beta(MAF, a=1, b=25)</p>
+<p>myskat.wlinear = SKAT(pheno, geno, kernel=“wlinear”, a=1, b=25) myskat.wlinear</p>
+<p># apply SKAT with quadratic kernel</p>
+<p>myskat.quad = SKAT(pheno, geno, kernel=“quadratic”) myskat.quad</p>
+<p># apply SKAT with IBS kernel</p>
+<p>myskat.ibs = SKAT(pheno, geno, kernel=“IBS”) myskat.ibs</p>
+<p>## End(Not run)</p>
 <p>SKAT: Sequence Kernel Association Test</p>
 <p>Info: cases controls variants<br />
 1000 1000 20<br />
@@ -2180,54 +2150,22 @@ NULL IBS</p>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-</div>
-<div id="not-run-2" class="section level2">
-<h2>Not run:</h2>
-</div>
-</div>
-<div id="number-of-cases-1" class="section level1">
-<h1># number of cases</h1>
-</div>
-<div id="cases-500-1" class="section level1">
-<h1>cases = 500</h1>
-</div>
-<div id="number-of-controls-1" class="section level1">
-<h1># number of controls</h1>
-</div>
-<div id="controls-500-1" class="section level1">
-<h1>controls = 500</h1>
-</div>
-<div id="total-cases-controls-2" class="section level1">
-<h1># total (cases + controls)</h1>
-</div>
-<div id="total-cases-controls-3" class="section level1">
-<h1>total = cases + controls</h1>
-</div>
-<div id="phenotype-vector-1" class="section level1">
-<h1># phenotype vector</h1>
-</div>
-<div id="phenotype-crep1cases-rep0controls" class="section level1">
-<h1>phenotype = c(rep(1,cases), rep(0,controls))</h1>
-</div>
-<div id="genotype-matrix-with-10-variants-random-data-set.seed123-1" class="section level1">
-<h1># genotype matrix with 10 variants (random data) set.seed(123)</h1>
-</div>
-<div id="genotype-matrixrbinomtotal10-2-0.10-nrowtotal-ncol10" class="section level1">
-<h1>genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)</h1>
-</div>
-<div id="apply-calpha-with-500-permutations" class="section level1">
-<h1># apply CALPHA with 500 permutations</h1>
-</div>
-<div id="mycalpha-calphaphenotype-genotype-perm500" class="section level1">
-<h1>mycalpha = CALPHA(phenotype, genotype, perm=500)</h1>
-</div>
-<div id="this-is-what-we-get" class="section level1">
-<h1># this is what we get</h1>
-</div>
-<div id="mycalpha" class="section level1">
-<h1>mycalpha</h1>
-<div id="endnot-run-2" class="section level2">
-<h2>End(Not run)</h2>
+<p>## Not run:</p>
+<p># number of cases</p>
+<p>cases = 500</p>
+<p># number of controls</p>
+<p>controls = 500</p>
+<p># total (cases + controls)</p>
+<p>total = cases + controls</p>
+<p># phenotype vector</p>
+<p>phenotype = c(rep(1,cases), rep(0,controls))</p>
+<p># genotype matrix with 10 variants (random data) set.seed(123)</p>
+<p>genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)</p>
+<p># apply CALPHA with 500 permutations</p>
+<p>mycalpha = CALPHA(phenotype, genotype, perm=500)</p>
+<p># this is what we get</p>
+<p>mycalpha</p>
+<p>## End(Not run)</p>
 <p>CALPHA: c-alpha Test</p>
 <p>Info: cases controls variants<br />
 500 500 10 n.perms<br />
@@ -2236,6 +2174,7 @@ NULL IBS</p>
 -348.500000 0.093765<br />
 perm.pval<br />
 0.036000</p>
+</div>
 <div id="combined-tests" class="section level5">
 <h5><strong>Combined tests:</strong></h5>
 <p>Strengths – are stronger with respect to the percentage of causal variants and the presence of both trait increasing and decreasing variants.</p>
@@ -2260,84 +2199,34 @@ perm.pval<br />
 </ol>
 <p>data(SKAT.example)</p>
 <p>attach(SKAT.example)</p>
-</div>
-</div>
-<div id="not-run-3" class="section level2">
-<h2>Not run:</h2>
-</div>
-</div>
-<div id="skat-with-default-beta125-weights" class="section level1">
-<h1># SKAT with default Beta(1,25) Weights</h1>
-</div>
-<div id="without-covariates" class="section level1">
-<h1># - without covariates</h1>
-</div>
-<div id="continuous-trait" class="section level1">
-<h1># continuous trait</h1>
-</div>
-<div id="obj-skat_null_modely.c-1-out_typec" class="section level1">
-<h1>obj&lt;-SKAT_Null_Model(y.c ~ 1, out_type=“C”)</h1>
-</div>
-<div id="skatz-objp.value" class="section level1">
-<h1>SKAT(Z, obj)$p.value</h1>
-</div>
-<div id="dichotomous-trait" class="section level1">
-<h1># dichotomous trait</h1>
-</div>
-<div id="obj-skat_null_modely.b-1-out_typed" class="section level1">
-<h1>obj&lt;-SKAT_Null_Model(y.b ~ 1, out_type=“D”)</h1>
-</div>
-<div id="skatz-objp.value-1" class="section level1">
-<h1>SKAT(Z, obj)$p.value</h1>
-</div>
-<div id="skat-with-default-beta125-weights-1" class="section level1">
-<h1># SKAT with default Beta(1,25) Weights</h1>
-</div>
-<div id="with-covariates" class="section level1">
-<h1># - with covariates</h1>
-</div>
-<div id="continuous-trait-1" class="section level1">
-<h1># continuous trait</h1>
-</div>
-<div id="obj-skat_null_modely.c-x-out_typec" class="section level1">
-<h1>obj&lt;-SKAT_Null_Model(y.c ~ X, out_type=“C”)</h1>
-</div>
-<div id="skatz-objp.value-2" class="section level1">
-<h1>SKAT(Z, obj)$p.value</h1>
-</div>
-<div id="obj.b-skat_null_modely.b-x-out_typed" class="section level1">
-<h1>obj.b&lt;-SKAT_Null_Model(y.b ~ X, out_type=“D”)</h1>
-</div>
-<div id="skatz-obj.bp.value" class="section level1">
-<h1>SKAT(Z, obj.b)$p.value</h1>
-</div>
-<div id="skat-with-default-beta125-weights-2" class="section level1">
-<h1># SKAT with default Beta(1,25) Weights</h1>
-</div>
-<div id="optimal-test" class="section level1">
-<h1># - Optimal Test</h1>
-</div>
-<div id="skatz-obj-methodoptimal.adjp.value" class="section level1">
-<h1>SKAT(Z, obj, method=“optimal.adj”)$p.value</h1>
-</div>
-<div id="you-can-get-the-same-p-value-by-using-methodskato" class="section level1">
-<h1># you can get the same p-value by using method=“SKATO”</h1>
-</div>
-<div id="skatz-obj-methodskatop.value" class="section level1">
-<h1>SKAT(Z, obj, method=“SKATO”)$p.value</h1>
-</div>
-<div id="skat-with-beta130-weights" class="section level1">
-<h1># SKAT with Beta(1,30) Weights</h1>
-</div>
-<div id="skatz-obj-weights.betac130p.value" class="section level1">
-<h1>SKAT(Z, obj, weights.beta=c(1,30))$p.value</h1>
-</div>
-<div id="dexp1---exp-1---0" class="section level1">
-<h1>dexp(1) - exp(-1) #-&gt; 0</h1>
-<div id="endnot-run-3" class="section level2">
-<h2>End(Not run)</h2>
+<p>## Not run:</p>
+<p># SKAT with default Beta(1,25) Weights</p>
+<p># - without covariates</p>
+<p># continuous trait</p>
+<p>obj&lt;-SKAT_Null_Model(y.c ~ 1, out_type=“C”)</p>
+<p>SKAT(Z, obj)$p.value</p>
+<p># dichotomous trait</p>
+<p>obj&lt;-SKAT_Null_Model(y.b ~ 1, out_type=“D”)</p>
+<p>SKAT(Z, obj)$p.value</p>
+<p># SKAT with default Beta(1,25) Weights</p>
+<p># - with covariates</p>
+<p># continuous trait</p>
+<p>obj&lt;-SKAT_Null_Model(y.c ~ X, out_type=“C”)</p>
+<p>SKAT(Z, obj)$p.value</p>
+<p>obj.b&lt;-SKAT_Null_Model(y.b ~ X, out_type=“D”)</p>
+<p>SKAT(Z, obj.b)$p.value</p>
+<p># SKAT with default Beta(1,25) Weights</p>
+<p># - Optimal Test</p>
+<p>SKAT(Z, obj, method=“optimal.adj”)$p.value</p>
+<p># you can get the same p-value by using method=“SKATO”</p>
+<p>SKAT(Z, obj, method=“SKATO”)$p.value</p>
+<p># SKAT with Beta(1,30) Weights</p>
+<p>SKAT(Z, obj, weights.beta=c(1,30))$p.value</p>
+<p>dexp(1) - exp(-1) #-&gt; 0</p>
+<p>## End(Not run)</p>
 <p>Optimal unified test (SKAT-O)</p>
 <p>p-value 0.003849451</p>
+</div>
 <div id="ec-test" class="section level5">
 <h5><strong>EC test:</strong></h5>
 <p>Strengths – is powerful when a very small proportion of variants are causal</p>
@@ -2405,7 +2294,6 @@ loaded via a namespace (and not attached):
 [13] whisker_0.4     rmarkdown_2.5   tools_4.0.3     stringr_1.4.0  
 [17] glue_1.4.2      httpuv_1.5.4    xfun_0.19       yaml_2.2.1     
 [21] compiler_4.0.3  htmltools_0.5.0 knitr_1.30     </code></pre>
-</div>
 </div>
 </div>
 </div>
