@@ -63,15 +63,6 @@ library(AssotesteR)
   mycmc
 ```
 
- CMC: Combined Multivariate and Collapsing Method 
-
-Info: 
-   cases  controls  variants   rarevar       maf      perm  
-     500       500        10         5      0.05       500  
-
- cmc.stat   asym.pval   perm.pval   
- 1.767877    0.940315    0.940000 
-
 ##### **Adaptive Burden tests:** 
 
 Strengths – are stronger than burden tests using fixed weights or thresholds. Some tests can improve result interpretation
@@ -115,17 +106,6 @@ myasum
 myasumord = ASSU.Ord(phenotype, genotype, perm=500)
 myasumord
 ```
-
-ASUM: Adaptive Sum Test 
-
-Info: 
-   cases  controls  variants  
-     500       500        10  
- n.perms  
-     500  
-
-asum.stat   perm.pval   
--1.167671    0.650000 
 
 ##### **Variance-Component tests:** 
 
@@ -257,15 +237,6 @@ mycalpha = CALPHA(phenotype, genotype, perm=500)
 # this is what we get
 mycalpha
 ```
-
-CALPHA: c-alpha Test 
-
-Info: 
-   cases  controls  variants   n.perms  
-     500       500        10       500  
-
-calpha.stat     asym.pval     perm.pval   
- -71.500000      0.733445      0.770000  
 
 ##### **Combined tests:** 
 
