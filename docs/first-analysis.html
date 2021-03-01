@@ -427,7 +427,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-28
+<strong>Last updated:</strong> 2021-03-01
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -518,16 +518,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree41cde53905835c9f41f54c0bafb9d8d15677ddc0targetblank41cde53a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/41cde53905835c9f41f54c0bafb9d8d15677ddc0" target="_blank">41cde53</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreefb68cd4baeffe9afbac5e78123fec636870050fftargetblankfb68cd4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/SophieFournier/myproject/tree/fb68cd4baeffe9afbac5e78123fec636870050ff" target="_blank">fb68cd4</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttree41cde53905835c9f41f54c0bafb9d8d15677ddc0targetblank41cde53a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomSophieFourniermyprojecttreefb68cd4baeffe9afbac5e78123fec636870050fftargetblankfb68cd4a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/41cde53905835c9f41f54c0bafb9d8d15677ddc0" target="_blank">41cde53</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/SophieFournier/myproject/tree/fb68cd4baeffe9afbac5e78123fec636870050ff" target="_blank">fb68cd4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -574,6 +574,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/SophieFournier/myproject/blob/fb68cd4baeffe9afbac5e78123fec636870050ff/analysis/first-analysis.Rmd" target="_blank">fb68cd4</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-03-01
+</td>
+<td>
+Add my first analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/SophieFournier/myproject/af2c1a33789b30d23102a8ec28bf7f796ec75502/docs/first-analysis.html" target="_blank">af2c1a3</a>
+</td>
+<td>
+SophieFournier
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -2000,26 +2034,35 @@ Add my first analysis
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-<p>## Not run:</p>
-<p># number of cases</p>
-<p>cases = 500</p>
-<p># number of controls</p>
-<p>controls = 500</p>
-<p># total (cases + controls)</p>
-<p>total = cases + controls</p>
-<p># phenotype vector</p>
-<p>phenotype = c(rep(1,cases), rep(0,controls))</p>
-<p># genotype matrix with 10 variants (random data) set.seed(1234)</p>
-<p>genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)</p>
-<p># apply CMC with maf=0.05 and 500 permutations</p>
-<p>mycmc = CMC(phenotype, genotype, maf=0.05, perm=500) mycmc</p>
-<p>## End(Not run)</p>
+<pre class="r"><code>library(AssotesteR)</code></pre>
+<pre><code>Loading required package: mvtnorm</code></pre>
+<pre class="r"><code>## Not run: 
+  # number of cases
+  cases = 500
+  # number of controls
+  controls = 500
+  # total (cases + controls)
+  total = cases + controls
+  # phenotype vector
+  phenotype = c(rep(1,cases), rep(0,controls))
+  # genotype matrix with 10 variants (random data)
+  set.seed(1234)
+  genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)
+  # apply CMC with maf=0.05 and 500 permutations
+  mycmc = CMC(phenotype, genotype, maf=0.05, perm=500)
+  mycmc</code></pre>
+<pre><code>
+     CMC: Combined Multivariate and Collapsing Method 
+
+Info: 
+   cases  controls  variants   rarevar       maf      perm  
+     500       500        10         5      0.05       500  
+
+ cmc.stat   asym.pval   perm.pval   
+ 1.767877    0.940315    0.940000   </code></pre>
 <p>CMC: Combined Multivariate and Collapsing Method</p>
-<p>Info:</p>
-<p>cases controls variants<br />
-500 500 10<br />
-rarevar maf perm<br />
-5 0.05 500</p>
+<p>Info: cases controls variants rarevar maf perm<br />
+500 500 10 5 0.05 500</p>
 <p>cmc.stat asym.pval perm.pval<br />
 1.767877 0.940315 0.940000</p>
 </div>
@@ -2042,22 +2085,41 @@ rarevar maf perm<br />
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-<p>## Not run:</p>
-<p># number of cases</p>
-<p>cases = 500</p>
-<p># number of controls</p>
-<p>controls = 500</p>
-<p># total (cases + controls)</p>
-<p>total = cases + controls</p>
-<p># phenotype vector</p>
-<p>phenotype = c(rep(1, cases), rep(0, controls))</p>
-<p># genotype matrix with 10 variants (random data) set.seed(123)</p>
-<p>genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)</p>
-<p># apply ASUM with 500 permutations</p>
-<p>myasum = ASUM(phenotype, genotype, perm=500) myasum</p>
-<p># apply ASUM.Ord with 500 permutations</p>
-<p>myasumord = ASSU.Ord(phenotype, genotype, perm=500) myasumord</p>
-<p>## End(Not run)</p>
+<pre class="r"><code>library(AssotesteR)
+# number of cases
+cases = 500
+# number of controls
+controls = 500
+# total (cases + controls)
+total = cases + controls
+# phenotype vector
+phenotype = c(rep(1, cases), rep(0, controls))
+# genotype matrix with 10 variants (random data) set.seed(123)
+genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)
+# apply ASUM with 500 permutations
+myasum = ASUM(phenotype, genotype, perm=500)
+myasum</code></pre>
+<pre><code>
+     ASUM: Adaptive Sum Test 
+
+Info: 
+   cases  controls  variants   n.perms  
+     500       500        10       500  
+
+asum.stat   perm.pval   
+-3.216117    0.004000   </code></pre>
+<pre class="r"><code># apply ASUM.Ord with 500 permutations
+myasumord = ASSU.Ord(phenotype, genotype, perm=500)
+myasumord</code></pre>
+<pre><code>
+     ASSU.Ord: Adaptive Sum of Squared Score (Ordered) 
+
+Info: 
+   cases  controls  variants   n.perms  
+     500       500        10       500  
+
+assu.stat   perm.pval   
+ 0.421601    0.016000   </code></pre>
 <p>ASUM: Adaptive Sum Test</p>
 <p>Info: cases controls variants<br />
 500 500 10<br />
@@ -2085,23 +2147,25 @@ n.perms<br />
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Examples</li>
 </ol>
-<p>## Not run:</p>
-<p># load data genodata</p>
-<p>data(genodata)</p>
-<p># phenotype (first column of genodata)</p>
-<p>pheno = genodata[,1]</p>
-<p># genotype (rest of columns of genodata)</p>
-<p>geno = genodata[,-1]</p>
-<p># apply SKAT with linear kernel</p>
-<p>myskat.linear = SKAT(pheno, geno, kernel=“linear”) myskat.linear</p>
-<p># apply SKAT with weighted linear kernel</p>
-<p># weights estimated from distribution beta(MAF, a=1, b=25)</p>
-<p>myskat.wlinear = SKAT(pheno, geno, kernel=“wlinear”, a=1, b=25) myskat.wlinear</p>
-<p># apply SKAT with quadratic kernel</p>
-<p>myskat.quad = SKAT(pheno, geno, kernel=“quadratic”) myskat.quad</p>
-<p># apply SKAT with IBS kernel</p>
-<p>myskat.ibs = SKAT(pheno, geno, kernel=“IBS”) myskat.ibs</p>
-<p>## End(Not run)</p>
+<pre class="r"><code># load data genodata
+data(genodata)
+# phenotype (first column of genodata)
+pheno = genodata[,1]
+# genotype (rest of columns of genodata)
+geno = genodata[,-1]
+# apply SKAT with linear kernel 
+myskat.linear = SKAT(pheno, geno, kernel=&quot;linear&quot;)
+myskat.linear
+# apply SKAT with weighted linear kernel
+# weights estimated from distribution beta(MAF, a=1, b=25)
+myskat.wlinear = SKAT(pheno, geno, kernel=&quot;wlinear&quot;, a=1, b=25)
+myskat.wlinear
+# apply SKAT with quadratic kernel
+myskat.quad = SKAT(pheno, geno, kernel=&quot;quadratic&quot;)
+myskat.quad
+# apply SKAT with IBS kernel
+myskat.ibs = SKAT(pheno, geno, kernel=&quot;IBS&quot;)
+myskat.ibs</code></pre>
 <p>SKAT: Sequence Kernel Association Test</p>
 <p>Info: cases controls variants<br />
 1000 1000 20<br />
@@ -2150,30 +2214,34 @@ NULL IBS</p>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Example</li>
 </ol>
-<p>## Not run:</p>
-<p># number of cases</p>
-<p>cases = 500</p>
-<p># number of controls</p>
-<p>controls = 500</p>
-<p># total (cases + controls)</p>
-<p>total = cases + controls</p>
-<p># phenotype vector</p>
-<p>phenotype = c(rep(1,cases), rep(0,controls))</p>
-<p># genotype matrix with 10 variants (random data) set.seed(123)</p>
-<p>genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)</p>
-<p># apply CALPHA with 500 permutations</p>
-<p>mycalpha = CALPHA(phenotype, genotype, perm=500)</p>
-<p># this is what we get</p>
-<p>mycalpha</p>
-<p>## End(Not run)</p>
+<pre class="r"><code># number of cases
+cases = 500
+# number of controls
+controls = 500
+# total (cases + controls)
+total = cases + controls
+# phenotype vector
+phenotype = c(rep(1,cases), rep(0,controls))
+# genotype matrix with 10 variants (random data) set.seed(123)
+genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)
+# apply CALPHA with 500 permutations
+mycalpha = CALPHA(phenotype, genotype, perm=500)
+# this is what we get
+mycalpha</code></pre>
+<pre><code>
+     CALPHA: c-alpha Test 
+
+Info: 
+   cases  controls  variants   n.perms  
+     500       500        10       500  
+
+calpha.stat     asym.pval     perm.pval   
+-317.500000      0.122434      0.074000   </code></pre>
 <p>CALPHA: c-alpha Test</p>
-<p>Info: cases controls variants<br />
-500 500 10 n.perms<br />
-500</p>
-<p>calpha.stat asym.pval<br />
--348.500000 0.093765<br />
-perm.pval<br />
-0.036000</p>
+<p>Info: cases controls variants n.perms<br />
+500 500 10 500</p>
+<p>calpha.stat asym.pval perm.pval<br />
+-71.500000 0.733445 0.770000</p>
 </div>
 <div id="combined-tests" class="section level5">
 <h5><strong>Combined tests:</strong></h5>
@@ -2199,31 +2267,29 @@ perm.pval<br />
 </ol>
 <p>data(SKAT.example)</p>
 <p>attach(SKAT.example)</p>
-<p>## Not run:</p>
-<p># SKAT with default Beta(1,25) Weights</p>
-<p># - without covariates</p>
-<p># continuous trait</p>
-<p>obj&lt;-SKAT_Null_Model(y.c ~ 1, out_type=“C”)</p>
-<p>SKAT(Z, obj)$p.value</p>
-<p># dichotomous trait</p>
-<p>obj&lt;-SKAT_Null_Model(y.b ~ 1, out_type=“D”)</p>
-<p>SKAT(Z, obj)$p.value</p>
-<p># SKAT with default Beta(1,25) Weights</p>
-<p># - with covariates</p>
-<p># continuous trait</p>
-<p>obj&lt;-SKAT_Null_Model(y.c ~ X, out_type=“C”)</p>
-<p>SKAT(Z, obj)$p.value</p>
-<p>obj.b&lt;-SKAT_Null_Model(y.b ~ X, out_type=“D”)</p>
-<p>SKAT(Z, obj.b)$p.value</p>
-<p># SKAT with default Beta(1,25) Weights</p>
-<p># - Optimal Test</p>
-<p>SKAT(Z, obj, method=“optimal.adj”)$p.value</p>
-<p># you can get the same p-value by using method=“SKATO”</p>
-<p>SKAT(Z, obj, method=“SKATO”)$p.value</p>
-<p># SKAT with Beta(1,30) Weights</p>
-<p>SKAT(Z, obj, weights.beta=c(1,30))$p.value</p>
-<p>dexp(1) - exp(-1) #-&gt; 0</p>
-<p>## End(Not run)</p>
+<pre class="r"><code># SKAT with default Beta(1,25) Weights
+# - without covariates
+# continuous trait
+obj&lt;-SKAT_Null_Model(y.c ~ 1, out_type=&quot;C&quot;)
+SKAT(Z, obj)$p.value
+# dichotomous trait
+obj&lt;-SKAT_Null_Model(y.b ~ 1, out_type=&quot;D&quot;)
+SKAT(Z, obj)$p.value
+# SKAT with default Beta(1,25) Weights
+# - with covariates
+# continuous trait
+obj&lt;-SKAT_Null_Model(y.c ~ X, out_type=&quot;C&quot;)
+SKAT(Z, obj)$p.value
+obj.b&lt;-SKAT_Null_Model(y.b ~ X, out_type=&quot;D&quot;)
+SKAT(Z, obj.b)$p.value
+# SKAT with default Beta(1,25) Weights
+# - Optimal Test
+SKAT(Z, obj, method=&quot;optimal.adj&quot;)$p.value
+# you can get the same p-value by using method=&quot;SKATO&quot;
+SKAT(Z, obj, method=&quot;SKATO&quot;)$p.value
+# SKAT with Beta(1,30) Weights
+SKAT(Z, obj, weights.beta=c(1,30))$p.value
+dexp(1) - exp(-1) #-&gt; 0</code></pre>
 <p>Optimal unified test (SKAT-O)</p>
 <p>p-value 0.003849451</p>
 </div>
@@ -2285,15 +2351,15 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.6.2
+[1] AssotesteR_0.1-10 mvtnorm_1.1-1     workflowr_1.6.2  
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5      rprojroot_2.0.2 digest_0.6.27   later_1.1.0.1  
- [5] R6_2.5.0        git2r_0.27.1    magrittr_2.0.1  evaluate_0.14  
- [9] stringi_1.5.3   rlang_0.4.9     fs_1.5.0        promises_1.1.1 
-[13] whisker_0.4     rmarkdown_2.5   tools_4.0.3     stringr_1.4.0  
-[17] glue_1.4.2      httpuv_1.5.4    xfun_0.19       yaml_2.2.1     
-[21] compiler_4.0.3  htmltools_0.5.0 knitr_1.30     </code></pre>
+ [1] Rcpp_1.0.5        rprojroot_2.0.2   digest_0.6.27     later_1.1.0.1    
+ [5] R6_2.5.0          git2r_0.27.1      magrittr_2.0.1    evaluate_0.14    
+ [9] stringi_1.5.3     rlang_0.4.10      fs_1.5.0          promises_1.1.1   
+[13] whisker_0.4       rmarkdown_2.5     tools_4.0.3       stringr_1.4.0    
+[17] glue_1.4.2        httpuv_1.5.4      xfun_0.19         yaml_2.2.1       
+[21] compiler_4.0.3    htmltools_0.5.1.1 knitr_1.30       </code></pre>
 </div>
 </div>
 </div>
