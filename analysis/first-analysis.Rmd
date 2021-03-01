@@ -44,45 +44,33 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing dat
 
 (d) Example
 
- ## Not run:
-
- # number of cases
-
- cases = 500
-
- # number of controls
-
- controls = 500
-
- # total (cases + controls)
-
- total = cases + controls
-
- # phenotype vector
-
- phenotype = c(rep(1,cases), rep(0,controls))
-
- # genotype matrix with 10 variants (random data) set.seed(1234)
-
- genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)
-
- # apply CMC with maf=0.05 and 500 permutations
-
- mycmc = CMC(phenotype, genotype, maf=0.05, perm=500) mycmc
-
- ## End(Not run)
+```{r CMC, echo=T}
+library(AssotesteR)
+## Not run: 
+  # number of cases
+  cases = 500
+  # number of controls
+  controls = 500
+  # total (cases + controls)
+  total = cases + controls
+  # phenotype vector
+  phenotype = c(rep(1,cases), rep(0,controls))
+  # genotype matrix with 10 variants (random data)
+  set.seed(1234)
+  genotype = matrix(rbinom(total*10, 2, 0.051), nrow=total, ncol=10)
+  # apply CMC with maf=0.05 and 500 permutations
+  mycmc = CMC(phenotype, genotype, maf=0.05, perm=500)
+  mycmc
+```
 
  CMC: Combined Multivariate and Collapsing Method 
 
-Info:
+Info: 
+   cases  controls  variants   rarevar       maf      perm  
+     500       500        10         5      0.05       500  
 
-   cases   controls   variants  
-     500       500        10  
- rarevar       maf      perm  
-       5      0.05       500  
-
- cmc.stat   asym.pval  perm.pval   
- 1.767877   0.940315    0.940000
+ cmc.stat   asym.pval   perm.pval   
+ 1.767877    0.940315    0.940000 
 
 ##### **Adaptive Burden tests:** 
 
@@ -108,37 +96,25 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2. Missing dat
 
 (d) Example
 
- ## Not run:
-
- # number of cases
-
- cases = 500
-
- # number of controls
-
- controls = 500
-
- # total (cases + controls)
-
- total = cases + controls
-
- # phenotype vector
-
- phenotype = c(rep(1, cases), rep(0, controls))
-
- # genotype matrix with 10 variants (random data) set.seed(123)
-
- genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)
-
- # apply ASUM with 500 permutations
-
- myasum = ASUM(phenotype, genotype, perm=500) myasum
-
- # apply ASUM.Ord with 500 permutations
-
- myasumord = ASSU.Ord(phenotype, genotype, perm=500) myasumord
-  
- ## End(Not run)
+```{r ASUM, echo=T}
+library(AssotesteR)
+# number of cases
+cases = 500
+# number of controls
+controls = 500
+# total (cases + controls)
+total = cases + controls
+# phenotype vector
+phenotype = c(rep(1, cases), rep(0, controls))
+# genotype matrix with 10 variants (random data) set.seed(123)
+genotype = matrix(rbinom(total*10, 2, 0.05), nrow=total, ncol=10)
+# apply ASUM with 500 permutations
+myasum = ASUM(phenotype, genotype, perm=500)
+myasum
+# apply ASUM.Ord with 500 permutations
+myasumord = ASSU.Ord(phenotype, genotype, perm=500)
+myasumord
+```
 
 ASUM: Adaptive Sum Test 
 
@@ -175,39 +151,27 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 (d) Examples
 
- ## Not run: 
-   
- # load data genodata
-
- data(genodata)
-
- # phenotype (first column of genodata)
-
- pheno = genodata[,1]
-
- # genotype (rest of columns of genodata)
-
- geno = genodata[,-1]
-
- # apply SKAT with linear kernel 
-
- myskat.linear = SKAT(pheno, geno, kernel="linear") myskat.linear
-
- # apply SKAT with weighted linear kernel
-
- # weights estimated from distribution beta(MAF, a=1, b=25)
-
- myskat.wlinear = SKAT(pheno, geno, kernel="wlinear", a=1, b=25) myskat.wlinear
-
- # apply SKAT with quadratic kernel
-
- myskat.quad = SKAT(pheno, geno, kernel="quadratic") myskat.quad
-
- # apply SKAT with IBS kernel
-
- myskat.ibs = SKAT(pheno, geno, kernel="IBS") myskat.ibs
-  
- ## End(Not run)
+```{r SKAT, echo=T, eval=F}
+# load data genodata
+data(genodata)
+# phenotype (first column of genodata)
+pheno = genodata[,1]
+# genotype (rest of columns of genodata)
+geno = genodata[,-1]
+# apply SKAT with linear kernel 
+myskat.linear = SKAT(pheno, geno, kernel="linear")
+myskat.linear
+# apply SKAT with weighted linear kernel
+# weights estimated from distribution beta(MAF, a=1, b=25)
+myskat.wlinear = SKAT(pheno, geno, kernel="wlinear", a=1, b=25)
+myskat.wlinear
+# apply SKAT with quadratic kernel
+myskat.quad = SKAT(pheno, geno, kernel="quadratic")
+myskat.quad
+# apply SKAT with IBS kernel
+myskat.ibs = SKAT(pheno, geno, kernel="IBS")
+myskat.ibs
+```
 
 SKAT: Sequence Kernel Association Test 
 
@@ -276,51 +240,32 @@ Y: numeric vector with phenotype status: 0=controls, 1=cases. No missing data al
 X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 (d) Example
-
- ## Not run: 
     
- # number of cases
-
- cases = 500
-
- # number of controls
-
- controls = 500
- 
- # total (cases + controls)
-
- total = cases + controls
- 
- # phenotype vector
-
- phenotype = c(rep(1,cases), rep(0,controls))
-
- # genotype matrix with 10 variants (random data) set.seed(123)
-
- genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)
- 
- # apply CALPHA with 500 permutations
-
- mycalpha = CALPHA(phenotype, genotype, perm=500)
-
- # this is what we get
-
- mycalpha
-
- ## End(Not run)
+```{r CALPHA, echo=T}
+# number of cases
+cases = 500
+# number of controls
+controls = 500
+# total (cases + controls)
+total = cases + controls
+# phenotype vector
+phenotype = c(rep(1,cases), rep(0,controls))
+# genotype matrix with 10 variants (random data) set.seed(123)
+genotype = matrix(rbinom(total*10, 2, 0.10), nrow=total, ncol=10)
+# apply CALPHA with 500 permutations
+mycalpha = CALPHA(phenotype, genotype, perm=500)
+# this is what we get
+mycalpha
+```
 
 CALPHA: c-alpha Test 
 
 Info: 
-   cases  controls  variants  
-     500       500        10
-  n.perms  
-     500  
+   cases  controls  variants   n.perms  
+     500       500        10       500  
 
-calpha.stat     asym.pval   
--348.500000      0.093765   
-  perm.pval   
-   0.036000 
+calpha.stat     asym.pval     perm.pval   
+ -71.500000      0.733445      0.770000  
 
 ##### **Combined tests:** 
 
@@ -359,55 +304,31 @@ data(SKAT.example)
 
 attach(SKAT.example)
 
- ## Not run:
-
- # SKAT with default Beta(1,25) Weights
-
- # - without covariates
-
- # continuous trait
-
- obj<-SKAT_Null_Model(y.c ~ 1, out_type="C")
-
- SKAT(Z, obj)$p.value
-
- # dichotomous trait
-
- obj<-SKAT_Null_Model(y.b ~ 1, out_type="D")
-
- SKAT(Z, obj)$p.value
-
- # SKAT with default Beta(1,25) Weights
-
- # - with covariates
-
- # continuous trait
-
- obj<-SKAT_Null_Model(y.c ~ X, out_type="C")
-
- SKAT(Z, obj)$p.value
-
- obj.b<-SKAT_Null_Model(y.b ~ X, out_type="D")
-
- SKAT(Z, obj.b)$p.value
-
- # SKAT with default Beta(1,25) Weights
-
- # - Optimal Test
-
- SKAT(Z, obj, method="optimal.adj")$p.value
-
- # you can get the same p-value by using method="SKATO"
-
- SKAT(Z, obj, method="SKATO")$p.value
-
- # SKAT with Beta(1,30) Weights
-
- SKAT(Z, obj, weights.beta=c(1,30))$p.value
-
- dexp(1) - exp(-1) #-> 0
-
- ## End(Not run)
+```{r SKAT-O, echo=T, eval=F}
+# SKAT with default Beta(1,25) Weights
+# - without covariates
+# continuous trait
+obj<-SKAT_Null_Model(y.c ~ 1, out_type="C")
+SKAT(Z, obj)$p.value
+# dichotomous trait
+obj<-SKAT_Null_Model(y.b ~ 1, out_type="D")
+SKAT(Z, obj)$p.value
+# SKAT with default Beta(1,25) Weights
+# - with covariates
+# continuous trait
+obj<-SKAT_Null_Model(y.c ~ X, out_type="C")
+SKAT(Z, obj)$p.value
+obj.b<-SKAT_Null_Model(y.b ~ X, out_type="D")
+SKAT(Z, obj.b)$p.value
+# SKAT with default Beta(1,25) Weights
+# - Optimal Test
+SKAT(Z, obj, method="optimal.adj")$p.value
+# you can get the same p-value by using method="SKATO"
+SKAT(Z, obj, method="SKATO")$p.value
+# SKAT with Beta(1,30) Weights
+SKAT(Z, obj, weights.beta=c(1,30))$p.value
+dexp(1) - exp(-1) #-> 0
+```
 
 Optimal unified test (SKAT-O)
 
