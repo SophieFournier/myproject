@@ -332,6 +332,16 @@ X: numeric matrix or data frame with genotype data coded as 0, 1, 2.
 
 (d) Example
 
+sim1000G examples:
+
+```{r}
+library(sim1000G)
+examples_dir = system.file("examples", package = "sim1000G")
+vcf_file = file.path(examples_dir, "region.vcf.gz")
+vcf = readVCF( vcf_file, maxNumberOfVariants = 600 , min_maf = 0.01, max_maf = 1)
+startSimulation(vcf, totalNumberOfIndividuals = 1000)
+ids = generateUnrelatedIndividuals(200)
+```
 
 
 Sources:
