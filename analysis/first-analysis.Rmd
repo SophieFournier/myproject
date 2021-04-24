@@ -343,8 +343,25 @@ startSimulation(vcf, totalNumberOfIndividuals = 1000)
 ids = generateUnrelatedIndividuals(200)
 ```
 
+Genotypes:
+
+```{r}
+library("sim1000G")
+examples_dir = system.file("examples", package = "sim1000G")
+vcf_file = file.path(examples_dir, "region.vcf.gz")
+vcf = readVCF( vcf_file, maxNumberOfVariants = 1000 ,
+min_maf = 0.01 ,max_maf = NA)
+startSimulation(vcf, totalNumberOfIndividuals = 5000)
+ped1 = newNuclearFamily(1)
+retrieveGenotypes(ped1$gtindex)
+```
+
+Phenotypes:
+
 
 Sources:
+
+https://cran.r-project.org/web/packages/sim1000G/sim1000G.pdf
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4085641/ 
 
