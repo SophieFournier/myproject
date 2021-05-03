@@ -350,7 +350,7 @@ library("sim1000G")
 examples_dir = system.file("examples", package = "sim1000G")
 vcf_file = file.path(examples_dir, "region.vcf.gz")
 vcf = readVCF( vcf_file, maxNumberOfVariants = 1000 ,
-min_maf = 0.01 ,max_maf = NA)
+min_maf = 0.01 ,max_maf = 1)
 startSimulation(vcf, totalNumberOfIndividuals = 5000)
 ped1 = newNuclearFamily(1)
 retrieveGenotypes(ped1$gtindex)
@@ -360,6 +360,8 @@ Phenotypes:
 
 
 Sources:
+
+https://static-content.springer.com/esm/art%3A10.1186%2Fs12859-019-2611-1/MediaObjects/12859_2019_2611_MOESM1_ESM.pdf
 
 https://cran.r-project.org/web/packages/sim1000G/sim1000G.pdf
 
